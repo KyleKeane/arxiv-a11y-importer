@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     24291,        584]
-NotebookOptionsPosition[     23424,        551]
-NotebookOutlinePosition[     23772,        566]
-CellTagsIndexPosition[     23729,        563]
+NotebookDataLength[    167276,       2650]
+NotebookOptionsPosition[    164067,       2557]
+NotebookOutlinePosition[    164415,       2572]
+CellTagsIndexPosition[    164372,       2569]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -257,8 +257,10 @@ math</p>\>\"", "\n", "\t\t\t", ",", "\n", "\t\t\t", "True", "\n", "\t\t\t",
                     RowBox[{"BoxData", "[", 
                     RowBox[{"FormBox", "[", 
                     RowBox[{"content_", ",", " ", "_"}], "]"}], "]"}], " ", 
-                    "\[RuleDelayed]", " ", "content"}], ",", " ", 
-                    "Infinity"}], "]"}], " ", "/.", " ", 
+                    "\[RuleDelayed]", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"StripBoxes", " ", "@", " ", "content"}], ")"}]}],
+                     ",", " ", "Infinity"}], "]"}], " ", "/.", " ", 
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{
@@ -266,14 +268,32 @@ math</p>\>\"", "\n", "\t\t\t", ",", "\n", "\t\t\t", "True", "\n", "\t\t\t",
                     ",", " ", 
                     RowBox[{
                     RowBox[{"{", "s_", "}"}], " ", "\[RuleDelayed]", " ", 
-                    "s"}]}], "}"}]}]}], ";", "\[IndentingNewLine]", "\t\t\t", 
+                    "s"}], ",", " ", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"s_", ",", " ", "__"}], "}"}], " ", 
+                    "\[RuleDelayed]", " ", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "s", ",", " ", "\"\<WARNING: something got dropped\>\""}],
+                     "}"}], "]"}]}]}], "}"}]}]}], ";", "\n", "\t\t\t", 
                     RowBox[{"ExportString", "[", 
                     RowBox[{"boxes", ",", " ", "\"\<MathML\>\""}], "]"}]}]}], 
-                    "\n", "\t\t", "]"}]}], ";", "\[IndentingNewLine]", "\t\t", 
+                    "\n", "\t\t", "]"}]}], ";", "\n", "\t\t", 
+                    RowBox[{"If", "[", "\n", "\t\t\t", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"StringFreeQ", "[", 
+                    RowBox[{"mathML", ",", " ", "\"\<RowBox\>\""}], "]"}]}], 
+                    ",", "\n", "\t\t\t", 
+                    RowBox[{
+                    "mathML", " ", "=", " ", 
+                    "\"\<<p>Sorry, I failed to interpret that as latex \
+math</p>\>\""}]}], "\n", "\t\t", "]"}], ";", "\[IndentingNewLine]", "\t\t", 
                     RowBox[{"tag", " ", "\[Rule]", " ", "mathML"}]}]}], 
                    "\[IndentingNewLine]", "\t", "]"}], "&"}], " ", "/@", " ", 
-                 "maths"}]}], ";", "\n", 
-               RowBox[{"Print", "@", "mathML"}], ";", "\n", "\t", 
+                 "maths"}]}], ";", "\n", "\n", "\t", 
                RowBox[{"t", " ", "=", " ", 
                 RowBox[{
                 "XMLTemplate", "[", 
@@ -290,8 +310,8 @@ Successful: Equations from <wolfram:slot id='arxivID'/></h1>\n\
                    RowBox[{"\"\<arxivID\>\"", "\[Rule]", "arxivID"}], ",", 
                    " ", 
                    RowBox[{"\"\<eqs\>\"", " ", "\[Rule]", " ", "eqs"}]}], 
-                  "|>"}]}], "]"}]}]}], "\n", "\[IndentingNewLine]", "]"}]}]}],
-           "\n", "\n", "]"}]}]}], "\n", "\[IndentingNewLine]", "\n", "]"}], 
+                  "|>"}]}], "]"}]}]}], "\[IndentingNewLine]", "\n", "]"}]}]}],
+           "\n", "\n", "]"}]}]}], "\n", "\n", "\[IndentingNewLine]", "]"}], 
       "&"}], "\n", ",", "\n", 
      RowBox[{"AppearanceRules", " ", "\[Rule]", " ", 
       RowBox[{"<|", "\n", 
@@ -490,6 +510,9 @@ Cell[BoxData[{
   RowBox[{"arxivID", " ", "=", " ", "\"\<1603.06588\>\""}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
+  RowBox[{"arxivID", "=", "\"\<1603.06761\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"version", " ", "=", " ", "1"}], ";"}]}], "Input"],
 
 Cell[CellGroupData[{
@@ -500,53 +523,2036 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"\"\<Article ID\>\"", "\[Rule]", "arxivID"}], ",", 
     RowBox[{"\"\<Version Number\>\"", "\[Rule]", "version"}]}], "|>"}], 
-  "]"}]], "Input"],
+  "]"}]], "Input",
+ EmphasizeSyntaxErrors->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>d</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>&#950;</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mfrac>\\n   <mn>1</mn>\\n   <msub>\\n    <mi>Z</mi>\\n \
+   <mi>n</mi>\\n   </msub>\\n  </mfrac>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>H</mi>\\n     \
+<mi>n</mi>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>&#950;</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   \
+</mrow>\\n  </msup>\\n  <msup>\\n   <mo>&#8518;</mo>\\n   <mrow>\\n    \
+<mn>2</mn>\\n    <mo>&#8290;</mo>\\n    <mi>n</mi>\\n   </mrow>\\n  \
+</msup>\\n  <mi>&#950;</mi>\\n  <mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>H</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>&#950;</mi>\\n     \
+<mn>1</mn>\\n    </msub>\\n    <mo>,</mo>\\n    <mo>&#8230;</mo>\\n    \
+<mo>,</mo>\\n    <msub>\\n     <mi>&#950;</mi>\\n     <mi>n</mi>\\n    \
+</msub>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<munder>\\n   <mo>&#8721;</mo>\\n   <mrow>\\n    <mi>j</mi>\\n    \
+<mo>&#8800;</mo>\\n    <mi>k</mi>\\n   </mrow>\\n  </munder>\\n  <mi>log</mi>\
+\\n  <mo>&#8290;</mo>\\n  <mfrac>\\n   <mn>1</mn>\\n   <mrow>\\n    <msub>\\n \
+    <mi>&#950;</mi>\\n     <mi>j</mi>\\n    </msub>\\n    <mo>-</mo>\\n    \
+<msub>\\n     <mi>&#950;</mi>\\n     <mi>k</mi>\\n    </msub>\\n   </mrow>\\n \
+ </mfrac>\\n  <mo>+</mo>\\n  <mi>n</mi>\\n  <munderover>\\n   \
+<mo>&#8721;</mo>\\n   <mrow>\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mi>n</mi>\\n  </munderover>\\n  <mi>Q</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <msub>\\n    <mi>&#950;</mi>\
+\\n    <mi>j</mi>\\n   </msub>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>&#963;</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>&#950;</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>&#967;</mi>\\n   <mi>S</mi>\\n  </msub>\
+\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <mi>Q</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8518;</mo>\\n  <mi>A</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <munder>\\n   \
+<mrow>\\n    <mtext>lim </mtext>\\n    <mi>inf</mi>\\n   </mrow>\\n   \
+<mrow>\\n    <mi>&#950;</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     \
+<annotation encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    \
+</semantics>\\n    <mi>&#8734;</mi>\\n   </mrow>\\n  </munder>\\n  \
+<mo>&#8290;</mo>\\n  <mfrac>\\n   <mrow>\\n    <mi>Q</mi>\\n    \
+<mo>&#8289;</mo>\\n    <mo>(</mo>\\n    <mi>&#950;</mi>\\n    <mo>)</mo>\\n   \
+</mrow>\\n   <mrow>\\n    <mi>log</mi>\\n    <msup>\\n     <mtext>&#950; \
+</mtext>\\n     <mn>2</mn>\\n    </msup>\\n   </mrow>\\n  </mfrac>\\n  \
+<mo>&gt;</mo>\\n  <mn>1.</mn>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   \
+<mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SuperscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mi>RowBox</mi>\\n       <mo>[</mo>\\n       <mrow>\\n        <mo>{</mo>\\n   \
+     <mrow>\\n         <ms>-2</ms>\\n         <mo>,</mo>\\n         \
+<ms>k</ms>\\n        </mrow>\\n        <mo>}</mo>\\n       </mrow>\\n       \
+<mo>]</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <ms>&#63449;</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>FractionBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <ms>1</ms>\\n \
+      <mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n        \
+<mo>[</mo>\\n        <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n        \
+  <ms>2</ms>\\n          <mo>,</mo>\\n          <ms>&#960;</ms>\\n          \
+<mo>,</mo>\\n          <ms>k</ms>\\n         </mrow>\\n         <mo>}</mo>\\n \
+       </mrow>\\n        <mo>]</mo>\\n       </mrow>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>SubsuperscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>&#8747;</ms>\\n       <mo>,</mo>\\n       <ms>0</ms>\\n       \
+<mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n        <mo>[</mo>\\n  \
+      <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n          \
+<ms>2</ms>\\n          <mo>,</mo>\\n          <ms>&#960;</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>OverscriptBox</mi>\\n      <mo>[</mo>\\n \
+     <mrow>\\n       <ms>P</ms>\\n       <mo>,</mo>\\n       <ms>~</ms>\\n    \
+  </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        <mo>,</mo>\\n       \
+ <mrow>\\n         <mi>SuperscriptBox</mi>\\n         <mo>[</mo>\\n         \
+<mrow>\\n          <ms>e</ms>\\n          <mo>,</mo>\\n          <mrow>\\n    \
+       <mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n         \
+   <mo>{</mo>\\n            <mrow>\\n             <ms>i</ms>\\n             \
+<mo>,</mo>\\n             <ms>&#952;</ms>\\n            </mrow>\\n            \
+<mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>)</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>&#8518;</ms>\\n     <mo>,</mo>\\n     <ms>&#952;</ms>\\n     \
+<mo>,</mo>\\n     <ms>.</ms>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   \
+<mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>z</mi>\\n   <mi>j</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n \
+  <mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mi>&#950;</mi>\\n   <mi>j</mi>\\n  \
+</msub>\\n  <mtext>,  </mtext>\\n  <mi>j</mi>\\n  <mo>&#63449;</mo>\\n  \
+<mn>1</mn>\\n  <mo>,</mo>\\n  <mo>&#8230;</mo>\\n  <mo>,</mo>\\n  \
+<mi>n</mi>\\n  <mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mrow>\\n    <mi>n</mi>\\n    <mo>,</mo>\\n    <mi>p</mi>\\n  \
+ </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mrow>\\n    <msub>\\n     <mi>z</mi>\\n     <mn>1</mn>\\n    </msub>\\n    \
+<mo>,</mo>\\n    <mo>&#8230;</mo>\\n    <mo>,</mo>\\n    <msub>\\n     \
+<mi>z</mi>\\n     <mi>p</mi>\\n    </msub>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   <mi>r</mi>\\n   \
+<mi>n</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>p</mi>\\n   </mrow>\\n  </msubsup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>&#950;</mi>\\n     \
+<mn>1</mn>\\n    </msub>\\n    <mo>,</mo>\\n    <mo>&#8230;</mo>\\n    \
+<mo>,</mo>\\n    <msub>\\n     <mi>&#950;</mi>\\n     <mi>p</mi>\\n    \
+</msub>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<mi>det</mi>\\n  <mo>&#8290;</mo>\\n  <msubsup>\\n   <mrow>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <msub>\\n      <mi>K</mi>\\n      \
+<mi>n</mi>\\n     </msub>\\n     <mo>(</mo>\\n     <mrow>\\n      <msub>\\n   \
+    <mi>z</mi>\\n       <mi>i</mi>\\n      </msub>\\n      <mo>,</mo>\\n      \
+<msub>\\n       <mi>z</mi>\\n       <mi>j</mi>\\n      </msub>\\n     </mrow>\
+\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>)</mo>\\n   </mrow>\\n   <mrow>\\n \
+   <mi>i</mi>\\n    <mo>,</mo>\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mi>p</mi>\\n  </msubsup>\\n  <mo>,</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>K</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mn>2</mn>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>,    \
+</mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    \
+<mo>&#63449;</mo>\\n    <msubsup>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n     \
+<mtext>-1</mtext>\\n    </msubsup>\\n    <mo>&#8290;</mo>\\n    \
+<mi>&#950;</mi>\\n    <mtext>, </mtext>\\n    <mi>w</mi>\\n    \
+<mo>&#63449;</mo>\\n    <msubsup>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n     \
+<mtext>-1</mtext>\\n    </msubsup>\\n    <mo>&#8290;</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>Q</mi>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  \
+<mo>+</mo>\\n  <mi>H</mi>\\n  <mo>+</mo>\\n  <msub>\\n   <mi>Q</mi>\\n   \
+<mn>1</mn>\\n  </msub>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>K</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>L</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>w</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>R</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <mi>K</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>L</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>z</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mi>&#956;</mi>\\n   <mn>0</mn>\\n  \
+</msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   \
+<mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n   \
+ </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8518;</mo>\\n  <mi>A</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>L</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>M</mi>\\n   <mi>k</mi>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>&#8290;</mo>\\n    <mover>\\n     <mi>w</mi>\\n     <mo>_</mo>\\n    \
+</mover>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>,</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>E</mi>\\n   <mrow>\\n    <mi>a</mi>\\n    <mo>,</mo>\\n    <mi>b</mi>\\n  \
+ </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <munderover>\
+\\n   <mo>&#8721;</mo>\\n   <mn>0</mn>\\n   <mi>&#8734;</mi>\\n  \
+</munderover>\\n  <mfrac>\\n   <msup>\\n    <mi>z</mi>\\n    <mi>j</mi>\\n   \
+</msup>\\n   <mrow>\\n    <mi>&#915;</mi>\\n    <mo>&#8289;</mo>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <mi>a</mi>\\n     <mo>&#8290;</mo>\\n     \
+<mi>j</mi>\\n     <mo>+</mo>\\n     <mi>b</mi>\\n    </mrow>\\n    <mo>)</mo>\
+\\n   </mrow>\\n  </mfrac>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mrow>\\n   <mi>B</mi>\\n   <mo>&#8289;</mo>\\n   <mo>(</mo>\\n   <mrow>\
+\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mtext>WARNING: something got dropped</mtext>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>C</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <mi>R</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <msub>\\n   <mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\
+\\n  <mrow>\\n   <mo>[</mo>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  <msub>\\n   \
+<mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>R</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>r</mi>\\n   <mrow>\\n    <mn>2</mn>\\n  \
+  <mo>&#8290;</mo>\\n    <mi>&#955;</mi>\\n   </mrow>\\n  </msup>\\n  \
+<mo>+</mo>\\n  <mn>2</mn>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n  \
+ <mrow>\\n    <mn>1</mn>\\n    <mo>-</mo>\\n    <mfrac>\\n     \
+<mi>&#955;</mi>\\n     <mi>&#956;</mi>\\n    </mfrac>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>r</mi>\\n  <mtext>,    </mtext>\\n  <mi>r</mi>\\n  \
+<mo>&#63449;</mo>\\n  <mtext>| </mtext>\\n  <mi>z</mi>\\n  <mo>|</mo>\\n  \
+<mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>C</mi>\\n   <mi>&#946;</mi>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>R</mi>\\n   <mi>&#946;</mi>\\n  </msup>\
+\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <msub>\\n   <mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\
+\\n  <mrow>\\n   <mo>[</mo>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  <mo>-</mo>\\n  <msub>\
+\\n   <mfrac>\\n    <mn>1</mn>\\n    <mi>&#946;</mi>\\n   </mfrac>\\n   \
+<mi>z</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msup>\\n   <mi>R</mi>\\n   <mi>&#946;</mi>\\n  \
+</msup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>B</mi>\\n   <mi>&#946;</mi>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    \
+<mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<msup>\\n   <mi>b</mi>\\n   <mn>1</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    \
+<mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>+</mo>\\n  <mrow>\
+\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>&#946;</mi>\\n    <mo>-</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  \
+<mi>f</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <msup>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<mi>&#946;</mi>\\n      <mo>-</mo>\\n      <mn>1</mn>\\n     </mrow>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mn>2</mn>\\n   </msup>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>&#946;</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    </semantics>\
+\\n    <mn>1</mn>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>RowBox</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mo>{</mo>\\n   <mrow>\\n \
+   <mrow>\\n     <mi>BoxData</mi>\\n     <mo>[</mo>\\n     <mrow>\\n      \
+<mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n      \
+ <mrow>\\n        <mrow>\\n         <mi>SubscriptBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <ms>K</ms>\\n          <mo>,</mo>\\n \
+         <ms>n</ms>\\n         </mrow>\\n         <mo>]</mo>\\n        \
+</mrow>\\n        <mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n   \
+      <mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          \
+<mrow>\\n           <ms>(</ms>\\n           <mo>,</mo>\\n           <mrow>\\n \
+           <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n   \
+          <mo>{</mo>\\n             <mrow>\\n              <ms>z</ms>\\n      \
+        <mo>,</mo>\\n              <ms>,</ms>\\n              <mo>,</mo>\\n   \
+           <ms>z</ms>\\n             </mrow>\\n             <mo>}</mo>\\n     \
+       </mrow>\\n            <mo>]</mo>\\n           </mrow>\\n           \
+<mo>,</mo>\\n           <ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>&#63449;</ms>\\n        <mo>,</mo>\\n        \
+<ms>sup</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\
+\\n         <mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          \
+<mrow>\\n           <ms>{</ms>\\n           <mo>,</mo>\\n           <mrow>\\n \
+           <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n   \
+          <mo>{</mo>\\n             <mrow>\\n              <ms>| </ms>\\n     \
+         <mo>,</mo>\\n              <ms>f</ms>\\n              <mo>,</mo>\\n  \
+            <mrow>\\n               <mi>RowBox</mi>\\n               \
+<mo>[</mo>\\n               <mrow>\\n                <mo>{</mo>\\n            \
+    <mrow>\\n                 <ms>(</ms>\\n                 <mo>,</mo>\\n     \
+            <ms>z</ms>\\n                 <mo>,</mo>\\n                 \
+<ms>)</ms>\\n                </mrow>\\n                <mo>}</mo>\\n          \
+     </mrow>\\n               <mo>]</mo>\\n              </mrow>\\n           \
+   <mo>,</mo>\\n              <mrow>\\n               <mi>SuperscriptBox</mi>\
+\\n               <mo>[</mo>\\n               <mrow>\\n                \
+<ms>|</ms>\\n                <mo>,</mo>\\n                <ms>2</ms>\\n       \
+        </mrow>\\n               <mo>]</mo>\\n              </mrow>\\n        \
+      <mo>,</mo>\\n              <ms>; </ms>\\n              <mo>,</mo>\\n    \
+          <ms>f</ms>\\n              <mo>,</mo>\\n              \
+<ms>&#8712;</ms>\\n              <mo>,</mo>\\n              <mrow>\\n         \
+      <mi>SubscriptBox</mi>\\n               <mo>[</mo>\\n               \
+<mrow>\\n                <ms>&#62368;</ms>\\n                <mo>,</mo>\\n    \
+            <mrow>\\n                 <mi>OverscriptBox</mi>\\n               \
+  <mo>[</mo>\\n                 <mrow>\\n                  <mi>Null</mi>\\n   \
+               <mo>,</mo>\\n                  <ms>~</ms>\\n                 \
+</mrow>\\n                 <mo>]</mo>\\n                </mrow>\\n            \
+   </mrow>\\n               <mo>]</mo>\\n              </mrow>\\n             \
+ <mo>,</mo>\\n              <ms>, </ms>\\n              <mo>,</mo>\\n         \
+     <ms>&#8741; </ms>\\n              <mo>,</mo>\\n              \
+<ms>f</ms>\\n              <mo>,</mo>\\n              <ms>&#8741;</ms>\\n     \
+         <mo>,</mo>\\n              <ms>&#8804;</ms>\\n              \
+<mo>,</mo>\\n              <ms>1 </ms>\\n             </mrow>\\n             \
+<mo>}</mo>\\n            </mrow>\\n            <mo>]</mo>\\n           \
+</mrow>\\n           <mo>,</mo>\\n           <ms>}</ms>\\n          \
+</mrow>\\n          <mo>}</mo>\\n         </mrow>\\n         <mo>]</mo>\\n    \
+    </mrow>\\n        <mo>,</mo>\\n        <ms>.</ms>\\n       </mrow>\\n     \
+  <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>]</mo>\\n    </mrow>\\n    <mo>,</mo>\\n    <ms>WARNING: something got \
+dropped</ms>\\n   </mrow>\\n   <mo>}</mo>\\n  </mrow>\\n  <mo>]</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mrow>\\n   <msup>\\n    <mrow>\\n     <mi>u</mi>\\n     \
+<mo>&#8290;</mo>\\n     <mrow>\\n      <mo>(</mo>\\n      <mi>z</mi>\\n      \
+<mo>)</mo>\\n     </mrow>\\n    </mrow>\\n    <mn>2</mn>\\n   </msup>\\n   \
+<mo>&#8290;</mo>\\n   <msup>\\n    <mi>e</mi>\\n    <mrow>\\n     \
+<mo>-</mo>\\n     <msub>\\n      <mover>\\n       <mi>Q</mi>\\n       \
+<mo>~</mo>\\n      </mover>\\n      <mi>n</mi>\\n     </msub>\\n     \
+<mo>&#8290;</mo>\\n     <mrow>\\n      <mo>(</mo>\\n      <mi>z</mi>\\n      \
+<mo>)</mo>\\n     </mrow>\\n    </mrow>\\n   </msup>\\n   <mo>&#8804;</mo>\\n \
+  <msup>\\n    <mi>&#948;</mi>\\n    <mtext>-2</mtext>\\n   </msup>\\n   \
+<mo>&#8290;</mo>\\n   <msup>\\n    <mi>e</mi>\\n    <mrow>\\n     \
+<mtext>&#945; </mtext>\\n     <mrow>\\n      <mo>(</mo>\\n      <mrow>\\n     \
+  <mn>2</mn>\\n       <mi>M</mi>\\n       <mtext>&#948; </mtext>\\n       \
+<mtext>+ </mtext>\\n       <msup>\\n        <mi>&#948;</mi>\\n        \
+<mn>2</mn>\\n       </msup>\\n      </mrow>\\n      <mo>)</mo>\\n     </mrow>\
+\\n    </mrow>\\n   </msup>\\n   <msub>\\n    <mo>&#8747;</mo>\\n    \
+<mrow>\\n     <mi>D</mi>\\n     <mo>&#8289;</mo>\\n     <mo>(</mo>\\n     \
+<mrow>\\n      <mi>z</mi>\\n      <mo>,</mo>\\n      <mi>&#948;</mi>\\n     \
+</mrow>\\n     <mo>)</mo>\\n    </mrow>\\n   </msub>\\n   <mtext>| \
+</mtext>\\n   <mi>u</mi>\\n   <msup>\\n    <mo>|</mo>\\n    <mn>2</mn>\\n   \
+</msup>\\n   <msup>\\n    <mi>e</mi>\\n    <mrow>\\n     <mo>-</mo>\\n     \
+<msub>\\n      <mover>\\n       <mi>Q</mi>\\n       <mo>~</mo>\\n      \
+</mover>\\n      <mi>n</mi>\\n     </msub>\\n    </mrow>\\n   </msup>\\n   \
+<mo>&#8290;</mo>\\n   <mi>d</mi>\\n   <mo>&#8290;</mo>\\n   <mi>A</mi>\\n   \
+<mo>,</mo>\\n  </mrow>\\n  <mtext>WARNING: something got dropped</mtext>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>L</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mn>2</mn>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\
+\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <mi>n</mi>\\n  \
+  <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<mi>H</mi>\\n      <mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n     \
+  <mi>&#950;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n      <mo>+</mo>\\n   \
+   <mover>\\n       <mi>H</mi>\\n       <mo>_</mo>\\n      </mover>\\n      \
+<mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n       \
+<mi>&#951;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n     </mrow>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  \
+</msup>\\n  <mtext>,    </mtext>\\n  <mi>z</mi>\\n  <mo>&#63449;</mo>\\n  \
+<msubsup>\\n   <mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  \
+</msubsup>\\n  <mo>&#8290;</mo>\\n  <mi>&#950;</mi>\\n  <mtext>, </mtext>\\n  \
+<mi>w</mi>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   <mi>r</mi>\\n   \
+<mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  <mo>&#8290;</mo>\\n  \
+<mi>&#951;</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>H</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mi>H</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <msub>\\n     \
+<mi>r</mi>\\n     <mi>n</mi>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>,    \
+</mtext>\\n  <msub>\\n   <mi>Q</mi>\\n   <mrow>\\n    <mn>1</mn>\\n    \
+<mo>,</mo>\\n    <mi>n</mi>\\n   </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>1</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   \
+<mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>{</ms>\\n        \
+<mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>f</ms>\\n           <mo>,</mo>\\n           <ms>&#63449;</ms>\\n    \
+       <mo>,</mo>\\n           <ms>q</ms>\\n           <mo>,</mo>\\n          \
+ <ms>&#183;</ms>\\n           <mo>,</mo>\\n           <mrow>\\n            \
+<mi>SuperscriptBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n      \
+       <ms>e</ms>\\n             <mo>,</mo>\\n             <mrow>\\n          \
+    <mi>RowBox</mi>\\n              <mo>[</mo>\\n              <mrow>\\n      \
+         <mo>{</mo>\\n               <mrow>\\n                <ms>-</ms>\\n   \
+             <mo>,</mo>\\n                <mrow>\\n                 \
+<mi>SubscriptBox</mi>\\n                 <mo>[</mo>\\n                 <mrow>\
+\\n                  <ms>H</ms>\\n                  <mo>,</mo>\\n             \
+     <ms>n</ms>\\n                 </mrow>\\n                 <mo>]</mo>\\n   \
+             </mrow>\\n                <mo>,</mo>\\n                \
+<ms>/</ms>\\n                <mo>,</mo>\\n                <ms>2</ms>\\n       \
+        </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n        \
+      <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n            \
+<mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\\n           <ms>; \
+</ms>\\n           <mo>,</mo>\\n           <ms>q</ms>\\n           <mo>,</mo>\
+\\n           <ms>&#8712;</ms>\\n           <mo>,</mo>\\n           <mrow>\\n \
+           <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n   \
+          <mo>{</mo>\\n             <mrow>\\n              <ms>(</ms>\\n      \
+        <mo>,</mo>\\n              <ms>n</ms>\\n              <mo>,</mo>\\n   \
+           <ms>)</ms>\\n             </mrow>\\n             <mo>}</mo>\\n     \
+       </mrow>\\n            <mo>]</mo>\\n           </mrow>\\n          \
+</mrow>\\n          <mo>}</mo>\\n         </mrow>\\n         <mo>]</mo>\\n    \
+    </mrow>\\n        <mo>,</mo>\\n        <ms>}</ms>\\n       </mrow>\\n     \
+  <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n    \
+</mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  \
+<mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mover>\\n    <mi>&#956;</mi>\\n    \
+<mo>~</mo>\\n   </mover>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n  \
+  <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mi>z</mi>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n   \
+  <mrow>\\n      <mn>1</mn>\\n      <mo>,</mo>\\n      <mi>n</mi>\\n     \
+</mrow>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>&#8518;</mo>\\n  <mi>A</mi>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mrow>\\n   <mo>&#8747;</mo>\\n   <msup>\\n    <mrow>\\n     \
+<mi>L</mi>\\n     <mo>&#8290;</mo>\\n     <mrow>\\n      <mo>(</mo>\\n      \
+<mrow>\\n       <mi>z</mi>\\n       <mo>,</mo>\\n       <mi>w</mi>\\n      \
+</mrow>\\n      <mo>)</mo>\\n     </mrow>\\n    </mrow>\\n    <mn>2</mn>\\n   \
+</msup>\\n   <mo>&#8518;</mo>\\n   <msub>\\n    <mi>&#956;</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>w</mi>\\n    <mo>)</mo>\\n   </mrow>\\n   <mo>&#8804;</mo>\\n   \
+<mi>L</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n \
+    <mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\\n    </mrow>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>.</mo>\\n  </mrow>\\n  <mtext>WARNING: \
+something got dropped</mtext>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   \
+<mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>SubsuperscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>W</ms>\\n       <mo>,</mo>\\n       <ms>n</ms>\\n       <mo>,</mo>\\n     \
+  <ms>+</ms>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>[</ms>\\n        \
+<mo>,</mo>\\n        <ms>&#968;</ms>\\n        <mo>,</mo>\\n        \
+<ms>]</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     \
+<mo>,</mo>\\n     <ms>0.</ms>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n  \
+ <mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   \
+<mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n      \
+ <mrow>\\n        <ms>[</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>f</ms>\\n           <mo>,</mo>\
+\\n           <ms>(</ms>\\n           <mo>,</mo>\\n           <mrow>\\n       \
+     <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n         \
+    <mo>{</mo>\\n             <mrow>\\n              <mrow>\\n               \
+<mi>SubscriptBox</mi>\\n               <mo>[</mo>\\n               <mrow>\\n  \
+              <ms>&#950;</ms>\\n                <mo>,</mo>\\n                \
+<ms>1</ms>\\n               </mrow>\\n               <mo>]</mo>\\n            \
+  </mrow>\\n              <mo>,</mo>\\n              <ms>,</ms>\\n            \
+  <mo>,</mo>\\n              <ms>&#8230;</ms>\\n              <mo>,</mo>\\n   \
+           <ms>,</ms>\\n              <mo>,</mo>\\n              <mrow>\\n    \
+           <mi>SubscriptBox</mi>\\n               <mo>[</mo>\\n               \
+<mrow>\\n                <ms>&#950;</ms>\\n                <mo>,</mo>\\n      \
+          <ms>p</ms>\\n               </mrow>\\n               <mo>]</mo>\\n  \
+            </mrow>\\n             </mrow>\\n             <mo>}</mo>\\n       \
+     </mrow>\\n            <mo>]</mo>\\n           </mrow>\\n           \
+<mo>,</mo>\\n           <ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>]</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>&#63449;</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>FractionBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mrow>\\n     \
+   <mi>RowBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<mo>{</mo>\\n         <mrow>\\n          <mrow>\\n           \
+<mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n            \
+<mo>{</mo>\\n            <mrow>\\n             <ms>(</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>n</ms>\\n                <mo>,</mo>\\n       \
+         <ms>-</ms>\\n                <mo>,</mo>\\n                <ms>p</ms>\
+\\n               </mrow>\\n               <mo>}</mo>\\n              </mrow>\
+\\n              <mo>]</mo>\\n             </mrow>\\n             \
+<mo>,</mo>\\n             <ms>)</ms>\\n            </mrow>\\n            \
+<mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n          <mo>,</mo>\\n          <ms>!</ms>\\n         </mrow>\\n   \
+      <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       </mrow>\\n   \
+    <mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n        <mo>[</mo>\
+\\n        <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n          \
+<ms>n</ms>\\n          <mo>,</mo>\\n          <ms>!</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n  \
+    <mrow>\\n       <ms>&#8747;</ms>\\n       <mo>,</mo>\\n       <mrow>\\n   \
+     <mi>SuperscriptBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<ms>&#62368;</ms>\\n         <mo>,</mo>\\n         <ms>p</ms>\\n        \
+</mrow>\\n        <mo>]</mo>\\n       </mrow>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>f</ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n  \
+    <mrow>\\n       <ms>&#183;</ms>\\n       <mo>,</mo>\\n       <mrow>\\n    \
+    <mi>RowBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<mo>{</mo>\\n         <mrow>\\n          <ms>n</ms>\\n          <mo>,</mo>\\n \
+         <ms>,</ms>\\n          <mo>,</mo>\\n          <ms>p</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <ms>&#8518;</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>V</ms>\\n       <mo>,</mo>\\n       <ms>p</ms>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   \
+<mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mrow>\\n   <msub>\\n    <mi>B</mi>\\n    <mi>n</mi>\\n   </msub>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>WARNING: something got \
+dropped</mtext>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>RowBox</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mo>{</mo>\\n   <mrow>\\n \
+   <mrow>\\n     <mi>BoxData</mi>\\n     <mo>[</mo>\\n     <mrow>\\n      \
+<mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n      \
+ <mrow>\\n        <mrow>\\n         <mi>SubscriptBox</mi>\\n         \
+<mo>[</mo>\\n         <ms>z</ms>\\n         <mo>]</mo>\\n        </mrow>\\n   \
+     <mo>,</mo>\\n        <ms>log</ms>\\n        <mo>,</mo>\\n        \
+<ms>L</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>(</ms>\\n           <mo>,</mo>\
+\\n           <mrow>\\n            <mi>RowBox</mi>\\n            \
+<mo>[</mo>\\n            <mrow>\\n             <mo>{</mo>\\n             \
+<mrow>\\n              <ms>z</ms>\\n              <mo>,</mo>\\n              \
+<ms>,</ms>\\n              <mo>,</mo>\\n              <ms>z</ms>\\n           \
+  </mrow>\\n             <mo>}</mo>\\n            </mrow>\\n            \
+<mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\\n           \
+<ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n   \
+      <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        \
+<ms>&#63449;</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>FractionBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mrow>\\n           <mi>RowBox</mi>\\n           <mo>[</mo>\\n           \
+<mrow>\\n            <mo>{</mo>\\n            <mrow>\\n             \
+<ms>L</ms>\\n             <mo>,</mo>\\n             <mrow>\\n              \
+<mi>RowBox</mi>\\n              <mo>[</mo>\\n              <mrow>\\n          \
+     <mo>{</mo>\\n               <mrow>\\n                <ms>(</ms>\\n       \
+         <mo>,</mo>\\n                <mrow>\\n                 \
+<mi>RowBox</mi>\\n                 <mo>[</mo>\\n                 <mrow>\\n    \
+              <mo>{</mo>\\n                  <mrow>\\n                   \
+<ms>z</ms>\\n                   <mo>,</mo>\\n                   <ms>,</ms>\\n \
+                  <mo>,</mo>\\n                   <ms>z</ms>\\n               \
+   </mrow>\\n                  <mo>}</mo>\\n                 </mrow>\\n       \
+          <mo>]</mo>\\n                </mrow>\\n                \
+<mo>,</mo>\\n                <ms>)</ms>\\n               </mrow>\\n           \
+    <mo>}</mo>\\n              </mrow>\\n              <mo>]</mo>\\n          \
+   </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n       \
+         <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n             <mo>,</mo>\\n     \
+        <ms>-</ms>\\n             <mo>,</mo>\\n             <mrow>\\n         \
+     <mi>SubscriptBox</mi>\\n              <mo>[</mo>\\n              \
+<mrow>\\n               <ms>&#8706;</ms>\\n               <mo>,</mo>\\n       \
+        <ms>z</ms>\\n              </mrow>\\n              <mo>]</mo>\\n      \
+       </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n         \
+    <mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n       \
+       <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n       \
+        <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n   \
+             <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n             <mo>,</mo>\\n     \
+        <mrow>\\n              <mi>SubscriptBox</mi>\\n              \
+<mo>[</mo>\\n              <mrow>\\n               <mrow>\\n                \
+<mi>OverscriptBox</mi>\\n                <mo>[</mo>\\n                \
+<mrow>\\n                 <ms>&#8706;</ms>\\n                 <mo>,</mo>\\n   \
+              <ms>_</ms>\\n                </mrow>\\n                \
+<mo>]</mo>\\n               </mrow>\\n               <mo>,</mo>\\n            \
+   <ms>z</ms>\\n              </mrow>\\n              <mo>]</mo>\\n           \
+  </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n       \
+         <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n         \
+   <mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n          <mo>,</mo>\\n          <mrow>\\n           \
+<mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n            \
+<mo>{</mo>\\n            <mrow>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>SuperscriptBox</mi>\\n   \
+           <mo>[</mo>\\n              <mrow>\\n               <mrow>\\n       \
+         <mi>RowBox</mi>\\n                <mo>[</mo>\\n                \
+<mrow>\\n                 <mo>{</mo>\\n                 <mrow>\\n             \
+     <ms>(</ms>\\n                  <mo>,</mo>\\n                  <mrow>\\n  \
+                 <mi>RowBox</mi>\\n                   <mo>[</mo>\\n           \
+        <mrow>\\n                    <mo>{</mo>\\n                    \
+<mrow>\\n                     <ms>z</ms>\\n                     <mo>,</mo>\\n \
+                    <ms>,</ms>\\n                     <mo>,</mo>\\n           \
+          <ms>z</ms>\\n                    </mrow>\\n                    \
+<mo>}</mo>\\n                   </mrow>\\n                   <mo>]</mo>\\n    \
+              </mrow>\\n                  <mo>,</mo>\\n                  \
+<ms>)</ms>\\n                 </mrow>\\n                 <mo>}</mo>\\n        \
+        </mrow>\\n                <mo>]</mo>\\n               </mrow>\\n      \
+         <mo>,</mo>\\n               <ms>2</ms>\\n              </mrow>\\n    \
+          <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n          \
+  <mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          </mrow>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>.</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>]</mo>\\n    </mrow>\\n  \
+  <mo>,</mo>\\n    <ms>WARNING: something got dropped</ms>\\n   </mrow>\\n   \
+<mo>}</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mover>\\n   \
+<mo>&#8706;</mo>\\n   <mo>_</mo>\\n  </mover>\\n  <mi>C</mi>\\n  \
+<mo>&#63449;</mo>\\n  <mi>R</mi>\\n  <mo>-</mo>\\n  <msub>\\n   <mi>Q</mi>\\n \
+  <mn>0</mn>\\n  </msub>\\n  <mo>-</mo>\\n  <mi>log</mi>\\n  <mo>&#8290;</mo>\
+\\n  <mi>R</mi>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>-</mo>\\n  <mn>1</mn>\\n  \
+<mo>-</mo>\\n  <mi>log</mi>\\n  <mo>&#8290;</mo>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>+</mo>\\n  <mi>o</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mn>1</mn>\\n   \
+<mo>)</mo>\\n  </mrow>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  \
+<mo>&#8721;</mo>\\n  <msup>\\n   <msub>\\n    <mi>a</mi>\\n    <mi>j</mi>\\n  \
+ </msub>\\n   <mn>2</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>z</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>j</mi>\\n   </mrow>\\n  </msup>\\n  <mtext>&#8741; </mtext>\\n  <msup>\\n \
+  <mi>w</mi>\\n   <mi>j</mi>\\n  </msup>\\n  <msubsup>\\n   \
+<mo>&#8741;</mo>\\n   <mrow>\\n    <msup>\\n     <mi>L</mi>\\n     <mn>2</mn>\
+\\n    </msup>\\n    <mo>(</mo>\\n    <msub>\\n     <mi>&#956;</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>)</mo>\\n   </mrow>\\n   <mn>2</mn>\\n  \
+</msubsup>\\n  <mo>&#8804;</mo>\\n  <mo>&#8721;</mo>\\n  <msub>\\n   \
+<mi>a</mi>\\n   <mi>j</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>z</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>j</mi>\\n   </mrow>\\n  </msup>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>a</mi>\\n   <mi>k</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  \
+<mn>0</mn>\\n  <mi>or</mi>\\n  <munderover>\\n   <mo>&#8721;</mo>\\n   <mrow>\
+\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    <mn>0</mn>\\n   </mrow>\\n   \
+<mrow>\\n    <mi>k</mi>\\n    <mo>-</mo>\\n    <mn>1</mn>\\n   </mrow>\\n  \
+</munderover>\\n  <msub>\\n   <mi>a</mi>\\n   <mi>j</mi>\\n  </msub>\\n  \
+<mtext>&#8741; </mtext>\\n  <msup>\\n   <mi>z</mi>\\n   <mi>j</mi>\\n  \
+</msup>\\n  <msubsup>\\n   <mo>&#8741;</mo>\\n   <mrow>\\n    <msup>\\n     \
+<mi>L</mi>\\n     <mn>2</mn>\\n    </msup>\\n    <mo>(</mo>\\n    <msub>\\n   \
+  <mi>&#956;</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>)</mo>\\n   \
+</mrow>\\n   <mn>2</mn>\\n  </msubsup>\\n  <mo>&#63449;</mo>\\n  \
+<mi>k</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>E</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <msup>\\n     <mo>|</mo>\\n     <mn>2</mn>\\n \
+   </msup>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<msub>\\n   <mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8290;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     \
+<mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n \
+  </mrow>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mrow>\\n    <mn>1</mn>\\n    <mo>+</mo>\\n    <mi>o</mi>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mn>1</mn>\\n     \
+<mo>)</mo>\\n    </mrow>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8290;</mo>\\n  <mi>as</mi>\\n  <mo>&#8290;</mo>\\n  <mi>z</mi>\\n  \
+<semantics>\\n   <mo>&#8594;</mo>\\n   <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n  \
+</semantics>\\n  <mi>&#8734;</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], \
+"Print"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ImportString", "::", "string"}], "MessageName"], 
+   RowBox[{"Import", "::", "texerr"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"First argument \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{equation}}\\\\\\\\n\\\\\\\\\\\\\\\\\
-def\\\\\\\\\\\\\\\\ee{\\\\\\\\\\\\\\\\end{equation}\\\\\\\"\\\", \\\",\\\", \
-\\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{eqnarray}}\\\\\\\\n\\\\\\\\\\\\\\\\def\\\\\\\
-\\\\\\\\\\eea{\\\\\\\\\\\\\\\\end{eqnarray}\\\\\\\"\\\", \\\",\\\", \
-\\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{equation}}\\\\\\\\n%\\\\\\\\\\\\\\\\def\\\\\
-\\\\\\\\\\\\ee{\\\\\\\\\\\\\\\\end{equation}\\\\\\\"\\\", \\\",\\\", \\\"\\\\\
-\\\"\\\\\\\\\\\\\\\\begin{eqnarray}}\\\\\\\\n%\\\\\\\\\\\\\\\\def\\\\\\\\\\\\\
-\\\\eea{\\\\\\\\\\\\\\\\end{eqnarray}\\\\\\\"\\\", \\\",\\\", \
-\\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{equation}\\\\\\\\n\\\\\\\\\\\\\\\\cH=J \\\\\
-\\\\\\\\\\\\sum_{i=1}^N \\\\\\\\\\\\\\\\vec{S}_i\\\\\\\\\\\\\\\\cdot \\\\\\\\\
-\\\\\\\\vec{S}_{i+1} +\\\\\\\\\\\\\\\\sum_i h_i S_i ^z\\\\\\\\n\\\\\\\\\\\\\\\
-\\label{eq:Ham}\\\\\\\\n\\\\\\\\\\\\\\\\end{equation}\\\\\\\"\\\"}], \
-\\\"}\\\"}]\\)\[NoBreak] is not a string. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/ImportString/string\\\", ButtonNote -> \
-\\\"ImportString::string\\\"]\\)\"\>"}]], "Message", "MSG"],
+  ":", " "}], "\<\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Error: Math field \
+expected\\\\\\\"\\\"}]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["\<\"<p>Sorry, I failed to interpret that as latex \
+math</p>\"\>"], "Print"],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ImportString", "::", "string"}], "MessageName"], 
+   RowBox[{"Import", "::", "texerr"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"First argument \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{equation}}\\\\\\\\n\\\\\\\\t\\\\\\\\\
-\\\\\\\\def\\\\\\\\\\\\\\\\ee{\\\\\\\\\\\\\\\\end{equation}\\\\\\\"\\\", \
-\\\",\\\", \\\"\\\\\\\"\\\\\\\\\\\\\\\\begin{eqnarray}}\\\\\\\\n\\\\\\\\t\\\\\
-\\\\\\\\\\\\def\\\\\\\\\\\\\\\\eea{\\\\\\\\\\\\\\\\end{eqnarray}\\\\\\\"\\\"}]\
-, \\\"}\\\"}]\\)\[NoBreak] is not a string. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/ImportString/string\\\", ButtonNote -> \
-\\\"ImportString::string\\\"]\\)\"\>"}]], "Message", "MSG"],
+  ":", " "}], "\<\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Error: Math field \
+expected\\\\\\\"\\\"}]\\)\"\>"}]], "Message", "MSG"],
 
-Cell[BoxData["mathML"], "Print"],
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"<p>Sorry, I failed to interpret that as latex \
+math</p>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>F</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mn>1</mn>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>w</mi>\\n   \
+ <mo>-</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>w</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    </semantics>\
+\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\
+\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   \
+<mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>2</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>F</ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        \
+<mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>z</ms>\\n           <mo>,</mo>\\n           <ms>,</ms>\\n           \
+<mo>,</mo>\\n           <ms>w</ms>\\n          </mrow>\\n          <mo>}</mo>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>)</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>&#63449;</ms>\\n     <mo>,</mo>\\n     <ms>O</ms>\\n     <mo>,</mo>\\n    \
+ <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        <mo>,</mo>\\n       \
+ <mrow>\\n         <mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n \
+         <mo>{</mo>\\n          <mrow>\\n           <ms>w</ms>\\n           \
+<mo>,</mo>\\n           <ms>-</ms>\\n           <mo>,</mo>\\n           \
+<ms>z</ms>\\n          </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n   \
+      <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        \
+<ms>)</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>,  </ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        \
+<mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>w</ms>\\n           <mo>,</mo>\\n           <ms>&#62754;</ms>\\n    \
+       <mo>,</mo>\\n           <ms>z</ms>\\n          </mrow>\\n          \
+<mo>}</mo>\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n      \
+  <mo>,</mo>\\n        <ms>)</ms>\\n       </mrow>\\n       <mo>}</mo>\\n     \
+ </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>.</ms>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  \
+</mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>A</mi>\\n     <mn>0</mn>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mrow>\\n      <mi>z</mi>\\n      <mo>,</mo>\\n      <mi>w</mi>\\n     \
+</mrow>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>-</mo>\\n    <msub>\\n     \
+<mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>w</mi>\\n     <mo>)</mo>\\n    </mrow>\\n \
+   <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    \
+<mn>2</mn>\\n   </mrow>\\n  </msup>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<msub>\\n    <mi>L</mi>\\n    <mn>0</mn>\\n   </msub>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n     \
+<mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\\n    </mrow>\\n    <mo>)</mo>\
+\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>&#960;</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>[</mo>\\n \
+   <mrow>\\n     <msub>\\n      <mi>&#967;</mi>\\n      <mi>z</mi>\\n     \
+</msub>\\n     <mo>&#8290;</mo>\\n     <msubsup>\\n      <mi>L</mi>\\n      \
+<mi>z</mi>\\n      <mi>&#9839;</mi>\\n     </msubsup>\\n    </mrow>\\n    \
+<mo>]</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msqrt>\\n   \
+<mrow>\\n    <msub>\\n     <mi>L</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\
+\\n    </mrow>\\n    <mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>&#183;</mo>\
+\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  <mtext>,    </mtext>\\n  \
+<mi>z</mi>\\n  <mo>&#8805;</mo>\\n  <mn>1.</mn>\\n </mrow>\\n</math>\"\>"], \
+"Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mrow>\\n    <mi>u</mi>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\
+\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n   \
+<mn>2</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   \
+<mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n   \
+ </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mtext>| </mtext>\\n  <mi>z</mi>\\n  \
+<msup>\\n   <mo>|</mo>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n \
+   <mi>k</mi>\\n    <mo>-</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mtext>| </mtext>\\n   <mi>z</mi>\\n   <msup>\\n    <mo>|</mo>\\n    \
+<mrow>\\n     <mn>2</mn>\\n     <mo>&#8290;</mo>\\n     <mi>k</mi>\\n     \
+<mo>-</mo>\\n     <mn>2</mn>\\n    </mrow>\\n   </msup>\\n   <mi>c</mi>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>R</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mi>R</mi>\\n    \
+ <mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mn>2</mn>\\n  </msub>\\n  <mtext>| </mtext>\\n  \
+<mi>z</mi>\\n  <msup>\\n   <mo>|</mo>\\n   <mrow>\\n    <mi>k</mi>\\n    \
+<mo>-</mo>\\n    <mn>1</mn>\\n   </mrow>\\n  </msup>\\n  <mtext>,  \
+</mtext>\\n  <mi>c</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>/</mo>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <mo>|</mo>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mn>1</mn>\\n    <mo>+</mo>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <msup>\\n     <mo>|</mo>\\n     <mrow>\\n     \
+ <mn>4</mn>\\n      <mo>&#8290;</mo>\\n      <mi>k</mi>\\n      <mo>-</mo>\\n \
+     <mn>2</mn>\\n     </mrow>\\n    </msup>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n </mrow>\\n</math>\"\>"], "Print"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "texerr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Error: Math field \
+expected\\\\\\\"\\\"}]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"<p>Sorry, I failed to interpret that as latex \
+math</p>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>F</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\
+\\n    <mo>,</mo>\\n    <mi>&#969;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>&#63449;</mo>\\n  <mn>1</mn>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n \
+ <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>&#950;</mi>\\n    <mo>-</mo>\\n    <mi>&#969;</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mtext>,  </mtext>\\n  <mn>2</mn>\\n  \
+<mo>&#8290;</mo>\\n  <mi>F</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#969;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>O</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#969;</mi>\\n    <mo>-</mo>\\n    \
+<mi>&#950;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <mi>n</mi>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<msub>\\n       <mi>Q</mi>\\n       <mn>0</mn>\\n      </msub>\\n      \
+<mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n       \
+<mi>&#969;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n      <mo>/</mo>\\n     \
+ <mn>2</mn>\\n      <mo>-</mo>\\n      <msub>\\n       <mi>A</mi>\\n       \
+<mn>0</mn>\\n      </msub>\\n      <mo>&#8290;</mo>\\n      <mrow>\\n       \
+<mo>(</mo>\\n       <mrow>\\n        <mi>&#950;</mi>\\n        <mo>,</mo>\\n  \
+      <mi>&#969;</mi>\\n       </mrow>\\n       <mo>)</mo>\\n      </mrow>\\n \
+    </mrow>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mi>n</mi>\\n    <mo>&#8290;</mo>\\n    \
+<msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mi>&#950;</mi>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  \
+</msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mi>n</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n \
+    <mi>&#950;</mi>\\n     <mo>,</mo>\\n     <mi>&#950;</mi>\\n    </mrow>\\n \
+   <mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    \
+<mi>&#960;</mi>\\n    <mi>n</mi>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   \
+<mrow>\\n    <mo>[</mo>\\n    <mrow>\\n     <msub>\\n      <mi>&#967;</mi>\\n \
+     <mi>&#950;</mi>\\n     </msub>\\n     <mo>&#8290;</mo>\\n     <msup>\\n  \
+    <mi>&#950;</mi>\\n      <mi>&#9839;</mi>\\n     </msup>\\n    </mrow>\\n  \
+  <mo>]</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    \
+<mo>(</mo>\\n    <mi>&#950;</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n \
+ <mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mo>&#8202;</mo>\
+\\n     <mi>n</mi>\\n    </msub>\\n    <mo>(</mo>\\n    <mrow>\\n     \
+<mi>&#950;</mi>\\n     <mo>,</mo>\\n     <mi>&#950;</mi>\\n    </mrow>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>&#183;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mi>Q</mi>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>&#950;</mi>\\n     <mo>)</mo>\\n    \
+</mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<mo>.</mo>\\n </mrow>\\n</math>\"\>"], "Print"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "texerr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*RowBox[{\\\"\\\\\\\"Error: <delim> expected\\\\\\\
+\"\\\"}]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"<p>Sorry, I failed to interpret that as latex \
+math</p>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<msub>\\n    <mi>R</mi>\\n    <mi>n</mi>\\n   </msub>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>Q</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mi>R</mi>\\n    \
+ <mi>n</mi>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mn>2</mn>\\n  </msub>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\"\>"], "Print"],
+
+Cell[BoxData["\<\"<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mi>R</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    \
+<mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <mi>c</mi>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <msup>\\n    <mi>z</mi>\\n \
+   <mrow>\\n     <mn>2</mn>\\n     <mo>&#8290;</mo>\\n     <mi>k</mi>\\n     \
+<mo>-</mo>\\n     <mn>2</mn>\\n    </mrow>\\n   </msup>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <mi>R</mi>\\n    \
+<mo>&#8289;</mo>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    <mo>)</mo>\\n   \
+</mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   <mi>C</mi>\\n   \
+<mn>2</mn>\\n  </msub>\\n  <mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n \
+  <mrow>\\n    <mtext>| </mtext>\\n    <mi>z</mi>\\n    <mo>|</mo>\\n    \
+<mo>&#8805;</mo>\\n    <mi>M</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n \
+ <mo>,</mo>\\n </mrow>\\n</math>\"\>"], "Print"]
+}, Open  ]],
 
 Cell[BoxData["\<\"\\n<html>\\n<head>\\n</head>\\n<body>\\n<h1>Import \
-Successful: Equations from \
-1603.06588</h1>\\n\\n\\t<h2>eq:Ham</h2>\\n\\t<p>Sorry, I failed to interpret \
-that as latex math</p>\\n \\n\\t<h2></h2>\\n\\t<p>Sorry, I failed to \
-interpret that as latex math</p>\\n \\n</body>\\n</html>\\n\"\>"], "Output"]
+Successful: Equations from 1603.06761</h1>\\n\\n<h2>bglaw</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>d</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>&#950;</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mfrac>\\n   <mn>1</mn>\\n   <msub>\\n    <mi>Z</mi>\\n \
+   <mi>n</mi>\\n   </msub>\\n  </mfrac>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>H</mi>\\n     \
+<mi>n</mi>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>&#950;</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   \
+</mrow>\\n  </msup>\\n  <msup>\\n   <mo>&#8518;</mo>\\n   <mrow>\\n    \
+<mn>2</mn>\\n    <mo>&#8290;</mo>\\n    <mi>n</mi>\\n   </mrow>\\n  \
+</msup>\\n  <mi>&#950;</mi>\\n  <mo>,</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>mini</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>H</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>&#950;</mi>\\n     \
+<mn>1</mn>\\n    </msub>\\n    <mo>,</mo>\\n    <mo>&#8230;</mo>\\n    \
+<mo>,</mo>\\n    <msub>\\n     <mi>&#950;</mi>\\n     <mi>n</mi>\\n    \
+</msub>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<munder>\\n   <mo>&#8721;</mo>\\n   <mrow>\\n    <mi>j</mi>\\n    \
+<mo>&#8800;</mo>\\n    <mi>k</mi>\\n   </mrow>\\n  </munder>\\n  <mi>log</mi>\
+\\n  <mo>&#8290;</mo>\\n  <mfrac>\\n   <mn>1</mn>\\n   <mrow>\\n    <msub>\\n \
+    <mi>&#950;</mi>\\n     <mi>j</mi>\\n    </msub>\\n    <mo>-</mo>\\n    \
+<msub>\\n     <mi>&#950;</mi>\\n     <mi>k</mi>\\n    </msub>\\n   </mrow>\\n \
+ </mfrac>\\n  <mo>+</mo>\\n  <mi>n</mi>\\n  <munderover>\\n   \
+<mo>&#8721;</mo>\\n   <mrow>\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mi>n</mi>\\n  </munderover>\\n  <mi>Q</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <msub>\\n    <mi>&#950;</mi>\
+\\n    <mi>j</mi>\\n   </msub>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>frost</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>&#963;</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>&#950;</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>&#967;</mi>\\n   <mi>S</mi>\\n  </msub>\
+\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <mi>Q</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8518;</mo>\\n  <mi>A</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>&#950;</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n </mrow>\\n</math>\\n \\n<h2>eq:grow</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <munder>\\n   \
+<mrow>\\n    <mtext>lim </mtext>\\n    <mi>inf</mi>\\n   </mrow>\\n   \
+<mrow>\\n    <mi>&#950;</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     \
+<annotation encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    \
+</semantics>\\n    <mi>&#8734;</mi>\\n   </mrow>\\n  </munder>\\n  \
+<mo>&#8290;</mo>\\n  <mfrac>\\n   <mrow>\\n    <mi>Q</mi>\\n    \
+<mo>&#8289;</mo>\\n    <mo>(</mo>\\n    <mi>&#950;</mi>\\n    <mo>)</mo>\\n   \
+</mrow>\\n   <mrow>\\n    <mi>log</mi>\\n    <msup>\\n     <mtext>&#950; \
+</mtext>\\n     <mn>2</mn>\\n    </msup>\\n   </mrow>\\n  </mfrac>\\n  \
+<mo>&gt;</mo>\\n  <mn>1.</mn>\\n </mrow>\\n</math>\\n \\n<h2>mod</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n  <mi>BoxData</mi>\\n \
+ <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   <mo>[</mo>\\n   <mrow>\\n    \
+<mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      <mi>SuperscriptBox</mi>\\n      \
+<mo>[</mo>\\n      <mrow>\\n       <mi>RowBox</mi>\\n       <mo>[</mo>\\n     \
+  <mrow>\\n        <mo>{</mo>\\n        <mrow>\\n         <ms>-2</ms>\\n      \
+   <mo>,</mo>\\n         <ms>k</ms>\\n        </mrow>\\n        <mo>}</mo>\\n \
+      </mrow>\\n       <mo>]</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     \
+</mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     <mo>,</mo>\\n     \
+<mrow>\\n      <mi>FractionBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n      \
+ <ms>1</ms>\\n       <mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n  \
+      <mo>[</mo>\\n        <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n  \
+        <ms>2</ms>\\n          <mo>,</mo>\\n          <ms>&#960;</ms>\\n      \
+    <mo>,</mo>\\n          <ms>k</ms>\\n         </mrow>\\n         \
+<mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       </mrow>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n  \
+    <mi>SubsuperscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>&#8747;</ms>\\n       <mo>,</mo>\\n       <ms>0</ms>\\n       \
+<mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n        <mo>[</mo>\\n  \
+      <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n          \
+<ms>2</ms>\\n          <mo>,</mo>\\n          <ms>&#960;</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>OverscriptBox</mi>\\n      <mo>[</mo>\\n \
+     <mrow>\\n       <ms>P</ms>\\n       <mo>,</mo>\\n       <ms>~</ms>\\n    \
+  </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        <mo>,</mo>\\n       \
+ <mrow>\\n         <mi>SuperscriptBox</mi>\\n         <mo>[</mo>\\n         \
+<mrow>\\n          <ms>e</ms>\\n          <mo>,</mo>\\n          <mrow>\\n    \
+       <mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n         \
+   <mo>{</mo>\\n            <mrow>\\n             <ms>i</ms>\\n             \
+<mo>,</mo>\\n             <ms>&#952;</ms>\\n            </mrow>\\n            \
+<mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>)</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>&#8518;</ms>\\n     <mo>,</mo>\\n     <ms>&#952;</ms>\\n     \
+<mo>,</mo>\\n     <ms>.</ms>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   \
+<mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>scale</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>z</mi>\\n   <mi>j</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n \
+  <mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mi>&#950;</mi>\\n   <mi>j</mi>\\n  \
+</msub>\\n  <mtext>,  </mtext>\\n  <mi>j</mi>\\n  <mo>&#63449;</mo>\\n  \
+<mn>1</mn>\\n  <mo>,</mo>\\n  <mo>&#8230;</mo>\\n  <mo>,</mo>\\n  \
+<mi>n</mi>\\n  <mo>,</mo>\\n </mrow>\\n</math>\\n \\n<h2>iip</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mrow>\\n    <mi>n</mi>\\n    <mo>,</mo>\\n    <mi>p</mi>\\n  \
+ </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mrow>\\n    <msub>\\n     <mi>z</mi>\\n     <mn>1</mn>\\n    </msub>\\n    \
+<mo>,</mo>\\n    <mo>&#8230;</mo>\\n    <mo>,</mo>\\n    <msub>\\n     \
+<mi>z</mi>\\n     <mi>p</mi>\\n    </msub>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   <mi>r</mi>\\n   \
+<mi>n</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>p</mi>\\n   </mrow>\\n  </msubsup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>&#950;</mi>\\n     \
+<mn>1</mn>\\n    </msub>\\n    <mo>,</mo>\\n    <mo>&#8230;</mo>\\n    \
+<mo>,</mo>\\n    <msub>\\n     <mi>&#950;</mi>\\n     <mi>p</mi>\\n    \
+</msub>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<mi>det</mi>\\n  <mo>&#8290;</mo>\\n  <msubsup>\\n   <mrow>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <msub>\\n      <mi>K</mi>\\n      \
+<mi>n</mi>\\n     </msub>\\n     <mo>(</mo>\\n     <mrow>\\n      <msub>\\n   \
+    <mi>z</mi>\\n       <mi>i</mi>\\n      </msub>\\n      <mo>,</mo>\\n      \
+<msub>\\n       <mi>z</mi>\\n       <mi>j</mi>\\n      </msub>\\n     </mrow>\
+\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>)</mo>\\n   </mrow>\\n   <mrow>\\n \
+   <mi>i</mi>\\n    <mo>,</mo>\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mi>p</mi>\\n  </msubsup>\\n  <mo>,</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>volk</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>K</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mn>2</mn>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>,    \
+</mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    \
+<mo>&#63449;</mo>\\n    <msubsup>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n     \
+<mtext>-1</mtext>\\n    </msubsup>\\n    <mo>&#8290;</mo>\\n    \
+<mi>&#950;</mi>\\n    <mtext>, </mtext>\\n    <mi>w</mi>\\n    \
+<mo>&#63449;</mo>\\n    <msubsup>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n     \
+<mtext>-1</mtext>\\n    </msubsup>\\n    <mo>&#8290;</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>badem</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>Q</mi>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  \
+<mo>+</mo>\\n  <mi>H</mi>\\n  <mo>+</mo>\\n  <msub>\\n   <mi>Q</mi>\\n   \
+<mn>1</mn>\\n  </msub>\\n </mrow>\\n</math>\\n \\n<h2>Mod</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>K</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>L</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>w</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n </mrow>\\n</math>\\n \
+\\n<h2>polar</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>R</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <mi>K</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>L</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>z</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>fock0</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mi>&#956;</mi>\\n   <mn>0</mn>\\n  \
+</msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   \
+<mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n   \
+ </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8518;</mo>\\n  <mi>A</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>mll</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>L</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msub>\\n   <mi>M</mi>\\n   <mi>k</mi>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>&#8290;</mo>\\n    <mover>\\n     <mi>w</mi>\\n     <mo>_</mo>\\n    \
+</mover>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>,</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>twopm</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>E</mi>\\n   <mrow>\\n    <mi>a</mi>\\n    <mo>,</mo>\\n    <mi>b</mi>\\n  \
+ </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <munderover>\
+\\n   <mo>&#8721;</mo>\\n   <mn>0</mn>\\n   <mi>&#8734;</mi>\\n  \
+</munderover>\\n  <mfrac>\\n   <msup>\\n    <mi>z</mi>\\n    <mi>j</mi>\\n   \
+</msup>\\n   <mrow>\\n    <mi>&#915;</mi>\\n    <mo>&#8289;</mo>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <mi>a</mi>\\n     <mo>&#8290;</mo>\\n     \
+<mi>j</mi>\\n     <mo>+</mo>\\n     <mi>b</mi>\\n    </mrow>\\n    <mo>)</mo>\
+\\n   </mrow>\\n  </mfrac>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2></h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n \
+ <mrow>\\n   <mi>B</mi>\\n   <mo>&#8289;</mo>\\n   <mo>(</mo>\\n   <mrow>\\n  \
+  <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mtext>WARNING: something got dropped</mtext>\\n \
+</mrow>\\n</math>\\n \\n<h2>cowa</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>C</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <mi>R</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <msub>\\n   <mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\
+\\n  <mrow>\\n   <mo>[</mo>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  <msub>\\n   \
+<mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>R</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>pppart</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>r</mi>\\n   <mrow>\\n    <mn>2</mn>\\n  \
+  <mo>&#8290;</mo>\\n    <mi>&#955;</mi>\\n   </mrow>\\n  </msup>\\n  \
+<mo>+</mo>\\n  <mn>2</mn>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n  \
+ <mrow>\\n    <mn>1</mn>\\n    <mo>-</mo>\\n    <mfrac>\\n     \
+<mi>&#955;</mi>\\n     <mi>&#956;</mi>\\n    </mfrac>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mi>r</mi>\\n  <mtext>,    </mtext>\\n  <mi>r</mi>\\n  \
+<mo>&#63449;</mo>\\n  <mtext>| </mtext>\\n  <mi>z</mi>\\n  <mo>|</mo>\\n  \
+<mo>,</mo>\\n </mrow>\\n</math>\\n \\n<h2>bewa</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>C</mi>\\n   <mi>&#946;</mi>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>R</mi>\\n   <mi>&#946;</mi>\\n  </msup>\
+\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <msub>\\n   <mo>-</mo>\\n   <mi>z</mi>\\n  </msub>\
+\\n  <mrow>\\n   <mo>[</mo>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  <mo>-</mo>\\n  <msub>\
+\\n   <mfrac>\\n    <mn>1</mn>\\n    <mi>&#946;</mi>\\n   </mfrac>\\n   \
+<mi>z</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mi>log</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msup>\\n   <mi>R</mi>\\n   <mi>&#946;</mi>\\n  \
+</msup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>expii</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>B</mi>\\n   <mi>&#946;</mi>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    \
+<mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<msup>\\n   <mi>b</mi>\\n   <mn>1</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    \
+<mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>+</mo>\\n  <mrow>\
+\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>&#946;</mi>\\n    <mo>-</mo>\\n    \
+<mn>1</mn>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\\n  \
+<mi>f</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <msup>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<mi>&#946;</mi>\\n      <mo>-</mo>\\n      <mn>1</mn>\\n     </mrow>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mn>2</mn>\\n   </msup>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>&#946;</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    </semantics>\
+\\n    <mn>1</mn>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n \
+</mrow>\\n</math>\\n \\n<h2>ker:sup</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n  <mi>RowBox</mi>\\n  \
+<mo>[</mo>\\n  <mrow>\\n   <mo>{</mo>\\n   <mrow>\\n    <mrow>\\n     \
+<mi>BoxData</mi>\\n     <mo>[</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n   \
+   <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        \
+<mrow>\\n         <mi>SubscriptBox</mi>\\n         <mo>[</mo>\\n         \
+<mrow>\\n          <ms>K</ms>\\n          <mo>,</mo>\\n          \
+<ms>n</ms>\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n      \
+  <mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>(</ms>\\n           <mo>,</mo>\\n           <mrow>\\n            \
+<mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n             \
+<mo>{</mo>\\n             <mrow>\\n              <ms>z</ms>\\n              \
+<mo>,</mo>\\n              <ms>,</ms>\\n              <mo>,</mo>\\n           \
+   <ms>z</ms>\\n             </mrow>\\n             <mo>}</mo>\\n            \
+</mrow>\\n            <mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\
+\\n           <ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\\n        \
+ </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n      \
+  <ms>&#63449;</ms>\\n        <mo>,</mo>\\n        <ms>sup</ms>\\n        \
+<mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>{</ms>\\n           <mo>,</mo>\\n           <mrow>\\n            \
+<mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n             \
+<mo>{</mo>\\n             <mrow>\\n              <ms>| </ms>\\n              \
+<mo>,</mo>\\n              <ms>f</ms>\\n              <mo>,</mo>\\n           \
+   <mrow>\\n               <mi>RowBox</mi>\\n               <mo>[</mo>\\n     \
+          <mrow>\\n                <mo>{</mo>\\n                <mrow>\\n     \
+            <ms>(</ms>\\n                 <mo>,</mo>\\n                 \
+<ms>z</ms>\\n                 <mo>,</mo>\\n                 <ms>)</ms>\\n     \
+           </mrow>\\n                <mo>}</mo>\\n               </mrow>\\n   \
+            <mo>]</mo>\\n              </mrow>\\n              <mo>,</mo>\\n  \
+            <mrow>\\n               <mi>SuperscriptBox</mi>\\n               \
+<mo>[</mo>\\n               <mrow>\\n                <ms>|</ms>\\n            \
+    <mo>,</mo>\\n                <ms>2</ms>\\n               </mrow>\\n       \
+        <mo>]</mo>\\n              </mrow>\\n              <mo>,</mo>\\n      \
+        <ms>; </ms>\\n              <mo>,</mo>\\n              <ms>f</ms>\\n  \
+            <mo>,</mo>\\n              <ms>&#8712;</ms>\\n              \
+<mo>,</mo>\\n              <mrow>\\n               <mi>SubscriptBox</mi>\\n   \
+            <mo>[</mo>\\n               <mrow>\\n                \
+<ms>&#62368;</ms>\\n                <mo>,</mo>\\n                <mrow>\\n    \
+             <mi>OverscriptBox</mi>\\n                 <mo>[</mo>\\n          \
+       <mrow>\\n                  <mi>Null</mi>\\n                  \
+<mo>,</mo>\\n                  <ms>~</ms>\\n                 </mrow>\\n       \
+          <mo>]</mo>\\n                </mrow>\\n               </mrow>\\n    \
+           <mo>]</mo>\\n              </mrow>\\n              <mo>,</mo>\\n   \
+           <ms>, </ms>\\n              <mo>,</mo>\\n              <ms>&#8741; \
+</ms>\\n              <mo>,</mo>\\n              <ms>f</ms>\\n              \
+<mo>,</mo>\\n              <ms>&#8741;</ms>\\n              <mo>,</mo>\\n     \
+         <ms>&#8804;</ms>\\n              <mo>,</mo>\\n              <ms>1 \
+</ms>\\n             </mrow>\\n             <mo>}</mo>\\n            \
+</mrow>\\n            <mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\
+\\n           <ms>}</ms>\\n          </mrow>\\n          <mo>}</mo>\\n        \
+ </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n      \
+  <ms>.</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>]</mo>\\n    </mrow>\\n    <mo>,</mo>\\n \
+   <ms>WARNING: something got dropped</ms>\\n   </mrow>\\n   <mo>}</mo>\\n  \
+</mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\\n \\n<h2>sub:ineq</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n  <mrow>\\n   \
+<msup>\\n    <mrow>\\n     <mi>u</mi>\\n     <mo>&#8290;</mo>\\n     \
+<mrow>\\n      <mo>(</mo>\\n      <mi>z</mi>\\n      <mo>)</mo>\\n     \
+</mrow>\\n    </mrow>\\n    <mn>2</mn>\\n   </msup>\\n   <mo>&#8290;</mo>\\n  \
+ <msup>\\n    <mi>e</mi>\\n    <mrow>\\n     <mo>-</mo>\\n     <msub>\\n      \
+<mover>\\n       <mi>Q</mi>\\n       <mo>~</mo>\\n      </mover>\\n      \
+<mi>n</mi>\\n     </msub>\\n     <mo>&#8290;</mo>\\n     <mrow>\\n      \
+<mo>(</mo>\\n      <mi>z</mi>\\n      <mo>)</mo>\\n     </mrow>\\n    </mrow>\
+\\n   </msup>\\n   <mo>&#8804;</mo>\\n   <msup>\\n    <mi>&#948;</mi>\\n    \
+<mtext>-2</mtext>\\n   </msup>\\n   <mo>&#8290;</mo>\\n   <msup>\\n    \
+<mi>e</mi>\\n    <mrow>\\n     <mtext>&#945; </mtext>\\n     <mrow>\\n      \
+<mo>(</mo>\\n      <mrow>\\n       <mn>2</mn>\\n       <mi>M</mi>\\n       \
+<mtext>&#948; </mtext>\\n       <mtext>+ </mtext>\\n       <msup>\\n        \
+<mi>&#948;</mi>\\n        <mn>2</mn>\\n       </msup>\\n      </mrow>\\n      \
+<mo>)</mo>\\n     </mrow>\\n    </mrow>\\n   </msup>\\n   <msub>\\n    \
+<mo>&#8747;</mo>\\n    <mrow>\\n     <mi>D</mi>\\n     <mo>&#8289;</mo>\\n    \
+ <mo>(</mo>\\n     <mrow>\\n      <mi>z</mi>\\n      <mo>,</mo>\\n      \
+<mi>&#948;</mi>\\n     </mrow>\\n     <mo>)</mo>\\n    </mrow>\\n   \
+</msub>\\n   <mtext>| </mtext>\\n   <mi>u</mi>\\n   <msup>\\n    \
+<mo>|</mo>\\n    <mn>2</mn>\\n   </msup>\\n   <msup>\\n    <mi>e</mi>\\n    \
+<mrow>\\n     <mo>-</mo>\\n     <msub>\\n      <mover>\\n       <mi>Q</mi>\\n \
+      <mo>~</mo>\\n      </mover>\\n      <mi>n</mi>\\n     </msub>\\n    \
+</mrow>\\n   </msup>\\n   <mo>&#8290;</mo>\\n   <mi>d</mi>\\n   \
+<mo>&#8290;</mo>\\n   <mi>A</mi>\\n   <mo>,</mo>\\n  </mrow>\\n  \
+<mtext>WARNING: something got dropped</mtext>\\n </mrow>\\n</math>\\n \
+\\n<h2>rhk</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>L</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    <mi>w</mi>\\n  \
+ </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mn>2</mn>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#951;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#8290;</mo>\
+\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <mi>n</mi>\\n  \
+  <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<mi>H</mi>\\n      <mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n     \
+  <mi>&#950;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n      <mo>+</mo>\\n   \
+   <mover>\\n       <mi>H</mi>\\n       <mo>_</mo>\\n      </mover>\\n      \
+<mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n       \
+<mi>&#951;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n     </mrow>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  \
+</msup>\\n  <mtext>,    </mtext>\\n  <mi>z</mi>\\n  <mo>&#63449;</mo>\\n  \
+<msubsup>\\n   <mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  \
+</msubsup>\\n  <mo>&#8290;</mo>\\n  <mi>&#950;</mi>\\n  <mtext>, </mtext>\\n  \
+<mi>w</mi>\\n  <mo>&#63449;</mo>\\n  <msubsup>\\n   <mi>r</mi>\\n   \
+<mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  <mo>&#8290;</mo>\\n  \
+<mi>&#951;</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2></h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>H</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <mi>H</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <msub>\\n     \
+<mi>r</mi>\\n     <mi>n</mi>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>,    \
+</mtext>\\n  <msub>\\n   <mi>Q</mi>\\n   <mrow>\\n    <mn>1</mn>\\n    \
+<mo>,</mo>\\n    <mi>n</mi>\\n   </mrow>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>n</mi>\\n  <mo>&#8290;</mo>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>1</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <msub>\\n     <mi>r</mi>\\n     <mi>n</mi>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mo>,</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>heff</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n \
+<mrow>\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n \
+  <mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>{</ms>\\n        \
+<mo>,</mo>\\n        <mrow>\\n         <mi>RowBox</mi>\\n         \
+<mo>[</mo>\\n         <mrow>\\n          <mo>{</mo>\\n          <mrow>\\n     \
+      <ms>f</ms>\\n           <mo>,</mo>\\n           <ms>&#63449;</ms>\\n    \
+       <mo>,</mo>\\n           <ms>q</ms>\\n           <mo>,</mo>\\n          \
+ <ms>&#183;</ms>\\n           <mo>,</mo>\\n           <mrow>\\n            \
+<mi>SuperscriptBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n      \
+       <ms>e</ms>\\n             <mo>,</mo>\\n             <mrow>\\n          \
+    <mi>RowBox</mi>\\n              <mo>[</mo>\\n              <mrow>\\n      \
+         <mo>{</mo>\\n               <mrow>\\n                <ms>-</ms>\\n   \
+             <mo>,</mo>\\n                <mrow>\\n                 \
+<mi>SubscriptBox</mi>\\n                 <mo>[</mo>\\n                 <mrow>\
+\\n                  <ms>H</ms>\\n                  <mo>,</mo>\\n             \
+     <ms>n</ms>\\n                 </mrow>\\n                 <mo>]</mo>\\n   \
+             </mrow>\\n                <mo>,</mo>\\n                \
+<ms>/</ms>\\n                <mo>,</mo>\\n                <ms>2</ms>\\n       \
+        </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n        \
+      <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n            \
+<mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\\n           <ms>; \
+</ms>\\n           <mo>,</mo>\\n           <ms>q</ms>\\n           <mo>,</mo>\
+\\n           <ms>&#8712;</ms>\\n           <mo>,</mo>\\n           <mrow>\\n \
+           <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n   \
+          <mo>{</mo>\\n             <mrow>\\n              <ms>(</ms>\\n      \
+        <mo>,</mo>\\n              <ms>n</ms>\\n              <mo>,</mo>\\n   \
+           <ms>)</ms>\\n             </mrow>\\n             <mo>}</mo>\\n     \
+       </mrow>\\n            <mo>]</mo>\\n           </mrow>\\n          \
+</mrow>\\n          <mo>}</mo>\\n         </mrow>\\n         <mo>]</mo>\\n    \
+    </mrow>\\n        <mo>,</mo>\\n        <ms>}</ms>\\n       </mrow>\\n     \
+  <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n    \
+</mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  \
+<mo>]</mo>\\n </mrow>\\n</math>\\n \\n<h2>apmeas</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>d</mi>\\n  \
+<mo>&#8290;</mo>\\n  <msub>\\n   <mover>\\n    <mi>&#956;</mi>\\n    \
+<mo>~</mo>\\n   </mover>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n  \
+  <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mi>z</mi>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n   \
+  <mrow>\\n      <mn>1</mn>\\n      <mo>,</mo>\\n      <mi>n</mi>\\n     \
+</mrow>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>&#8518;</mo>\\n  <mi>A</mi>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>mass:ineq</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n  <mrow>\\n   \
+<mo>&#8747;</mo>\\n   <msup>\\n    <mrow>\\n     <mi>L</mi>\\n     \
+<mo>&#8290;</mo>\\n     <mrow>\\n      <mo>(</mo>\\n      <mrow>\\n       \
+<mi>z</mi>\\n       <mo>,</mo>\\n       <mi>w</mi>\\n      </mrow>\\n      \
+<mo>)</mo>\\n     </mrow>\\n    </mrow>\\n    <mn>2</mn>\\n   </msup>\\n   \
+<mo>&#8518;</mo>\\n   <msub>\\n    <mi>&#956;</mi>\\n    <mn>0</mn>\\n   \
+</msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    \
+<mi>w</mi>\\n    <mo>)</mo>\\n   </mrow>\\n   <mo>&#8804;</mo>\\n   \
+<mi>L</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n \
+    <mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\\n    </mrow>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>.</mo>\\n  </mrow>\\n  <mtext>WARNING: \
+something got dropped</mtext>\\n </mrow>\\n</math>\\n \
+\\n<h2>W:identity</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n \
+<mrow>\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n \
+  <mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>SubsuperscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>W</ms>\\n       <mo>,</mo>\\n       <ms>n</ms>\\n       <mo>,</mo>\\n     \
+  <ms>+</ms>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      \
+<mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        <ms>[</ms>\\n        \
+<mo>,</mo>\\n        <ms>&#968;</ms>\\n        <mo>,</mo>\\n        \
+<ms>]</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     \
+<mo>,</mo>\\n     <ms>0.</ms>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n  \
+ <mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>exp:var</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n \
+<mrow>\\n  <mi>BoxData</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n \
+  <mo>[</mo>\\n   <mrow>\\n    <mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <ms>n</ms>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n      \
+ <mrow>\\n        <ms>[</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>f</ms>\\n           <mo>,</mo>\
+\\n           <ms>(</ms>\\n           <mo>,</mo>\\n           <mrow>\\n       \
+     <mi>RowBox</mi>\\n            <mo>[</mo>\\n            <mrow>\\n         \
+    <mo>{</mo>\\n             <mrow>\\n              <mrow>\\n               \
+<mi>SubscriptBox</mi>\\n               <mo>[</mo>\\n               <mrow>\\n  \
+              <ms>&#950;</ms>\\n                <mo>,</mo>\\n                \
+<ms>1</ms>\\n               </mrow>\\n               <mo>]</mo>\\n            \
+  </mrow>\\n              <mo>,</mo>\\n              <ms>,</ms>\\n            \
+  <mo>,</mo>\\n              <ms>&#8230;</ms>\\n              <mo>,</mo>\\n   \
+           <ms>,</ms>\\n              <mo>,</mo>\\n              <mrow>\\n    \
+           <mi>SubscriptBox</mi>\\n               <mo>[</mo>\\n               \
+<mrow>\\n                <ms>&#950;</ms>\\n                <mo>,</mo>\\n      \
+          <ms>p</ms>\\n               </mrow>\\n               <mo>]</mo>\\n  \
+            </mrow>\\n             </mrow>\\n             <mo>}</mo>\\n       \
+     </mrow>\\n            <mo>]</mo>\\n           </mrow>\\n           \
+<mo>,</mo>\\n           <ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>]</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     \
+<ms>&#63449;</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>FractionBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mrow>\\n     \
+   <mi>RowBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<mo>{</mo>\\n         <mrow>\\n          <mrow>\\n           \
+<mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n            \
+<mo>{</mo>\\n            <mrow>\\n             <ms>(</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>n</ms>\\n                <mo>,</mo>\\n       \
+         <ms>-</ms>\\n                <mo>,</mo>\\n                <ms>p</ms>\
+\\n               </mrow>\\n               <mo>}</mo>\\n              </mrow>\
+\\n              <mo>]</mo>\\n             </mrow>\\n             \
+<mo>,</mo>\\n             <ms>)</ms>\\n            </mrow>\\n            \
+<mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n          <mo>,</mo>\\n          <ms>!</ms>\\n         </mrow>\\n   \
+      <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       </mrow>\\n   \
+    <mo>,</mo>\\n       <mrow>\\n        <mi>RowBox</mi>\\n        <mo>[</mo>\
+\\n        <mrow>\\n         <mo>{</mo>\\n         <mrow>\\n          \
+<ms>n</ms>\\n          <mo>,</mo>\\n          <ms>!</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n  \
+    <mrow>\\n       <ms>&#8747;</ms>\\n       <mo>,</mo>\\n       <mrow>\\n   \
+     <mi>SuperscriptBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<ms>&#62368;</ms>\\n         <mo>,</mo>\\n         <ms>p</ms>\\n        \
+</mrow>\\n        <mo>]</mo>\\n       </mrow>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n     <mo>,</mo>\\n     <ms>f</ms>\\n     \
+<mo>,</mo>\\n     <mrow>\\n      <mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n  \
+    <mrow>\\n       <ms>&#183;</ms>\\n       <mo>,</mo>\\n       <mrow>\\n    \
+    <mi>RowBox</mi>\\n        <mo>[</mo>\\n        <mrow>\\n         \
+<mo>{</mo>\\n         <mrow>\\n          <ms>n</ms>\\n          <mo>,</mo>\\n \
+         <ms>,</ms>\\n          <mo>,</mo>\\n          <ms>p</ms>\\n         \
+</mrow>\\n         <mo>}</mo>\\n        </mrow>\\n        <mo>]</mo>\\n       \
+</mrow>\\n      </mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <ms>&#8518;</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>SubscriptBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<ms>V</ms>\\n       <mo>,</mo>\\n       <ms>p</ms>\\n      </mrow>\\n      \
+<mo>]</mo>\\n     </mrow>\\n    </mrow>\\n    <mo>}</mo>\\n   </mrow>\\n   \
+<mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\\n \\n<h2>{bern, \
+cauchyn}</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n \
+<mrow>\\n  <mrow>\\n   <msub>\\n    <mi>B</mi>\\n    <mi>n</mi>\\n   \
+</msub>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>,</mo>\\n    \
+<mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mtext>WARNING: \
+something got dropped</mtext>\\n </mrow>\\n</math>\\n \
+\\n<h2>Lap:log</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'>\\n \
+<mrow>\\n  <mi>RowBox</mi>\\n  <mo>[</mo>\\n  <mrow>\\n   <mo>{</mo>\\n   \
+<mrow>\\n    <mrow>\\n     <mi>BoxData</mi>\\n     <mo>[</mo>\\n     \
+<mrow>\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mo>{</mo>\\n       <mrow>\\n        <mrow>\\n         \
+<mi>SubscriptBox</mi>\\n         <mo>[</mo>\\n         <ms>z</ms>\\n         \
+<mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        <ms>log</ms>\\n   \
+     <mo>,</mo>\\n        <ms>L</ms>\\n        <mo>,</mo>\\n        <mrow>\\n \
+        <mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>(</ms>\\n           <mo>,</mo>\
+\\n           <mrow>\\n            <mi>RowBox</mi>\\n            \
+<mo>[</mo>\\n            <mrow>\\n             <mo>{</mo>\\n             \
+<mrow>\\n              <ms>z</ms>\\n              <mo>,</mo>\\n              \
+<ms>,</ms>\\n              <mo>,</mo>\\n              <ms>z</ms>\\n           \
+  </mrow>\\n             <mo>}</mo>\\n            </mrow>\\n            \
+<mo>]</mo>\\n           </mrow>\\n           <mo>,</mo>\\n           \
+<ms>)</ms>\\n          </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n   \
+      <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        \
+<ms>&#63449;</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>FractionBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mrow>\\n           <mi>RowBox</mi>\\n           <mo>[</mo>\\n           \
+<mrow>\\n            <mo>{</mo>\\n            <mrow>\\n             \
+<ms>L</ms>\\n             <mo>,</mo>\\n             <mrow>\\n              \
+<mi>RowBox</mi>\\n              <mo>[</mo>\\n              <mrow>\\n          \
+     <mo>{</mo>\\n               <mrow>\\n                <ms>(</ms>\\n       \
+         <mo>,</mo>\\n                <mrow>\\n                 \
+<mi>RowBox</mi>\\n                 <mo>[</mo>\\n                 <mrow>\\n    \
+              <mo>{</mo>\\n                  <mrow>\\n                   \
+<ms>z</ms>\\n                   <mo>,</mo>\\n                   <ms>,</ms>\\n \
+                  <mo>,</mo>\\n                   <ms>z</ms>\\n               \
+   </mrow>\\n                  <mo>}</mo>\\n                 </mrow>\\n       \
+          <mo>]</mo>\\n                </mrow>\\n                \
+<mo>,</mo>\\n                <ms>)</ms>\\n               </mrow>\\n           \
+    <mo>}</mo>\\n              </mrow>\\n              <mo>]</mo>\\n          \
+   </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n       \
+         <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n             <mo>,</mo>\\n     \
+        <ms>-</ms>\\n             <mo>,</mo>\\n             <mrow>\\n         \
+     <mi>SubscriptBox</mi>\\n              <mo>[</mo>\\n              \
+<mrow>\\n               <ms>&#8706;</ms>\\n               <mo>,</mo>\\n       \
+        <ms>z</ms>\\n              </mrow>\\n              <mo>]</mo>\\n      \
+       </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n         \
+    <mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n       \
+       <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n       \
+        <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n   \
+             <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n             <mo>,</mo>\\n     \
+        <mrow>\\n              <mi>SubscriptBox</mi>\\n              \
+<mo>[</mo>\\n              <mrow>\\n               <mrow>\\n                \
+<mi>OverscriptBox</mi>\\n                <mo>[</mo>\\n                \
+<mrow>\\n                 <ms>&#8706;</ms>\\n                 <mo>,</mo>\\n   \
+              <ms>_</ms>\\n                </mrow>\\n                \
+<mo>]</mo>\\n               </mrow>\\n               <mo>,</mo>\\n            \
+   <ms>z</ms>\\n              </mrow>\\n              <mo>]</mo>\\n           \
+  </mrow>\\n             <mo>,</mo>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>RowBox</mi>\\n           \
+   <mo>[</mo>\\n              <mrow>\\n               <mo>{</mo>\\n           \
+    <mrow>\\n                <ms>(</ms>\\n                <mo>,</mo>\\n       \
+         <mrow>\\n                 <mi>RowBox</mi>\\n                 \
+<mo>[</mo>\\n                 <mrow>\\n                  <mo>{</mo>\\n        \
+          <mrow>\\n                   <ms>z</ms>\\n                   \
+<mo>,</mo>\\n                   <ms>,</ms>\\n                   <mo>,</mo>\\n \
+                  <ms>z</ms>\\n                  </mrow>\\n                  \
+<mo>}</mo>\\n                 </mrow>\\n                 <mo>]</mo>\\n        \
+        </mrow>\\n                <mo>,</mo>\\n                <ms>)</ms>\\n  \
+             </mrow>\\n               <mo>}</mo>\\n              </mrow>\\n   \
+           <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n         \
+   <mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          \
+</mrow>\\n          <mo>,</mo>\\n          <mrow>\\n           \
+<mi>RowBox</mi>\\n           <mo>[</mo>\\n           <mrow>\\n            \
+<mo>{</mo>\\n            <mrow>\\n             <ms>L</ms>\\n             \
+<mo>,</mo>\\n             <mrow>\\n              <mi>SuperscriptBox</mi>\\n   \
+           <mo>[</mo>\\n              <mrow>\\n               <mrow>\\n       \
+         <mi>RowBox</mi>\\n                <mo>[</mo>\\n                \
+<mrow>\\n                 <mo>{</mo>\\n                 <mrow>\\n             \
+     <ms>(</ms>\\n                  <mo>,</mo>\\n                  <mrow>\\n  \
+                 <mi>RowBox</mi>\\n                   <mo>[</mo>\\n           \
+        <mrow>\\n                    <mo>{</mo>\\n                    \
+<mrow>\\n                     <ms>z</ms>\\n                     <mo>,</mo>\\n \
+                    <ms>,</ms>\\n                     <mo>,</mo>\\n           \
+          <ms>z</ms>\\n                    </mrow>\\n                    \
+<mo>}</mo>\\n                   </mrow>\\n                   <mo>]</mo>\\n    \
+              </mrow>\\n                  <mo>,</mo>\\n                  \
+<ms>)</ms>\\n                 </mrow>\\n                 <mo>}</mo>\\n        \
+        </mrow>\\n                <mo>]</mo>\\n               </mrow>\\n      \
+         <mo>,</mo>\\n               <ms>2</ms>\\n              </mrow>\\n    \
+          <mo>]</mo>\\n             </mrow>\\n            </mrow>\\n          \
+  <mo>}</mo>\\n           </mrow>\\n           <mo>]</mo>\\n          </mrow>\
+\\n         </mrow>\\n         <mo>]</mo>\\n        </mrow>\\n        \
+<mo>,</mo>\\n        <ms>.</ms>\\n       </mrow>\\n       <mo>}</mo>\\n      \
+</mrow>\\n      <mo>]</mo>\\n     </mrow>\\n     <mo>]</mo>\\n    </mrow>\\n  \
+  <mo>,</mo>\\n    <ms>WARNING: something got dropped</ms>\\n   </mrow>\\n   \
+<mo>}</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>wa:2</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mover>\\n   \
+<mo>&#8706;</mo>\\n   <mo>_</mo>\\n  </mover>\\n  <mi>C</mi>\\n  \
+<mo>&#63449;</mo>\\n  <mi>R</mi>\\n  <mo>-</mo>\\n  <msub>\\n   <mi>Q</mi>\\n \
+  <mn>0</mn>\\n  </msub>\\n  <mo>-</mo>\\n  <mi>log</mi>\\n  <mo>&#8290;</mo>\
+\\n  <mi>R</mi>\\n </mrow>\\n</math>\\n \\n<h2>rwa</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>-</mo>\\n  <mn>1</mn>\\n  \
+<mo>-</mo>\\n  <mi>log</mi>\\n  <mo>&#8290;</mo>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mi>n</mi>\\n  </msub>\\n  <mo>+</mo>\\n  <mi>o</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mn>1</mn>\\n   \
+<mo>)</mo>\\n  </mrow>\\n </mrow>\\n</math>\\n \\n<h2>co:mass</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  \
+<mo>&#8721;</mo>\\n  <msup>\\n   <msub>\\n    <mi>a</mi>\\n    <mi>j</mi>\\n  \
+ </msub>\\n   <mn>2</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>z</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>j</mi>\\n   </mrow>\\n  </msup>\\n  <mtext>&#8741; </mtext>\\n  <msup>\\n \
+  <mi>w</mi>\\n   <mi>j</mi>\\n  </msup>\\n  <msubsup>\\n   \
+<mo>&#8741;</mo>\\n   <mrow>\\n    <msup>\\n     <mi>L</mi>\\n     <mn>2</mn>\
+\\n    </msup>\\n    <mo>(</mo>\\n    <msub>\\n     <mi>&#956;</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>)</mo>\\n   </mrow>\\n   <mn>2</mn>\\n  \
+</msubsup>\\n  <mo>&#8804;</mo>\\n  <mo>&#8721;</mo>\\n  <msub>\\n   \
+<mi>a</mi>\\n   <mi>j</mi>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>z</mi>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n    \
+<mi>j</mi>\\n   </mrow>\\n  </msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>01</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>a</mi>\\n   <mi>k</mi>\\n  </msub>\\n  <mo>&#63449;</mo>\\n  \
+<mn>0</mn>\\n  <mi>or</mi>\\n  <munderover>\\n   <mo>&#8721;</mo>\\n   <mrow>\
+\\n    <mi>j</mi>\\n    <mo>&#63449;</mo>\\n    <mn>0</mn>\\n   </mrow>\\n   \
+<mrow>\\n    <mi>k</mi>\\n    <mo>-</mo>\\n    <mn>1</mn>\\n   </mrow>\\n  \
+</munderover>\\n  <msub>\\n   <mi>a</mi>\\n   <mi>j</mi>\\n  </msub>\\n  \
+<mtext>&#8741; </mtext>\\n  <msup>\\n   <mi>z</mi>\\n   <mi>j</mi>\\n  \
+</msup>\\n  <msubsup>\\n   <mo>&#8741;</mo>\\n   <mrow>\\n    <msup>\\n     \
+<mi>L</mi>\\n     <mn>2</mn>\\n    </msup>\\n    <mo>(</mo>\\n    <msub>\\n   \
+  <mi>&#956;</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>)</mo>\\n   \
+</mrow>\\n   <mn>2</mn>\\n  </msubsup>\\n  <mo>&#63449;</mo>\\n  \
+<mi>k</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>grow</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>E</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <msup>\\n     <mo>|</mo>\\n     <mn>2</mn>\\n \
+   </msup>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  \
+<msub>\\n   <mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  \
+<mrow>\\n   <mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8290;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     \
+<mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n \
+  </mrow>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mrow>\\n    <mn>1</mn>\\n    <mo>+</mo>\\n    <mi>o</mi>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mn>1</mn>\\n     \
+<mo>)</mo>\\n    </mrow>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8290;</mo>\\n  <mi>as</mi>\\n  <mo>&#8290;</mo>\\n  <mi>z</mi>\\n  \
+<semantics>\\n   <mo>&#8594;</mo>\\n   <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n  \
+</semantics>\\n  <mi>&#8734;</mi>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>pa:1</h2>\\n<p>Sorry, I failed to interpret that as latex math</p>\\n \
+\\n<h2>fzw</h2>\\n<p>Sorry, I failed to interpret that as latex math</p>\\n \
+\\n<h2>eu</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>F</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n   \
+ <mo>,</mo>\\n    <mi>w</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mn>1</mn>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>w</mi>\\n   \
+ <mo>-</mo>\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>w</mi>\\n    <semantics>\\n     <mo>&#8594;</mo>\\n     <annotation \
+encoding='Mathematica'>&quot;\\\\[Rule]&quot;</annotation>\\n    </semantics>\
+\\n    <mi>z</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>fu</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'>\\n <mrow>\\n  <mi>BoxData</mi>\\n \
+ <mo>[</mo>\\n  <mrow>\\n   <mi>RowBox</mi>\\n   <mo>[</mo>\\n   <mrow>\\n    \
+<mo>{</mo>\\n    <mrow>\\n     <mrow>\\n      <mi>SubscriptBox</mi>\\n      \
+<mo>[</mo>\\n      <ms>2</ms>\\n      <mo>]</mo>\\n     </mrow>\\n     \
+<mo>,</mo>\\n     <ms>F</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      \
+<mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n      \
+ <mrow>\\n        <ms>(</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>z</ms>\\n           <mo>,</mo>\
+\\n           <ms>,</ms>\\n           <mo>,</mo>\\n           <ms>w</ms>\\n   \
+       </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n         \
+<mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        <ms>)</ms>\\n     \
+  </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     \
+</mrow>\\n     <mo>,</mo>\\n     <ms>&#63449;</ms>\\n     <mo>,</mo>\\n     \
+<ms>O</ms>\\n     <mo>,</mo>\\n     <mrow>\\n      <mi>RowBox</mi>\\n      \
+<mo>[</mo>\\n      <mrow>\\n       <mo>{</mo>\\n       <mrow>\\n        \
+<ms>(</ms>\\n        <mo>,</mo>\\n        <mrow>\\n         \
+<mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n          \
+<mo>{</mo>\\n          <mrow>\\n           <ms>w</ms>\\n           <mo>,</mo>\
+\\n           <ms>-</ms>\\n           <mo>,</mo>\\n           <ms>z</ms>\\n   \
+       </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n         \
+<mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        <ms>)</ms>\\n     \
+  </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n     \
+</mrow>\\n     <mo>,</mo>\\n     <ms>,  </ms>\\n     <mo>,</mo>\\n     <mrow>\
+\\n      <mi>RowBox</mi>\\n      <mo>[</mo>\\n      <mrow>\\n       \
+<mo>{</mo>\\n       <mrow>\\n        <ms>(</ms>\\n        <mo>,</mo>\\n       \
+ <mrow>\\n         <mi>RowBox</mi>\\n         <mo>[</mo>\\n         <mrow>\\n \
+         <mo>{</mo>\\n          <mrow>\\n           <ms>w</ms>\\n           \
+<mo>,</mo>\\n           <ms>&#62754;</ms>\\n           <mo>,</mo>\\n          \
+ <ms>z</ms>\\n          </mrow>\\n          <mo>}</mo>\\n         </mrow>\\n  \
+       <mo>]</mo>\\n        </mrow>\\n        <mo>,</mo>\\n        <ms>)</ms>\
+\\n       </mrow>\\n       <mo>}</mo>\\n      </mrow>\\n      <mo>]</mo>\\n   \
+  </mrow>\\n     <mo>,</mo>\\n     <ms>.</ms>\\n    </mrow>\\n    \
+<mo>}</mo>\\n   </mrow>\\n   <mo>]</mo>\\n  </mrow>\\n  <mo>]</mo>\\n </mrow>\
+\\n</math>\\n \\n<h2>tay</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>A</mi>\\n     <mn>0</mn>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mrow>\\n      <mi>z</mi>\\n      <mo>,</mo>\\n      <mi>w</mi>\\n     \
+</mrow>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>-</mo>\\n    <msub>\\n     \
+<mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>w</mi>\\n     <mo>)</mo>\\n    </mrow>\\n \
+   <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    \
+</msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    \
+<mn>2</mn>\\n   </mrow>\\n  </msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>l0:cor</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<msub>\\n    <mi>L</mi>\\n    <mn>0</mn>\\n   </msub>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n     \
+<mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\\n    </mrow>\\n    <mo>)</mo>\
+\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>&#960;</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>[</mo>\\n \
+   <mrow>\\n     <msub>\\n      <mi>&#967;</mi>\\n      <mi>z</mi>\\n     \
+</msub>\\n     <mo>&#8290;</mo>\\n     <msubsup>\\n      <mi>L</mi>\\n      \
+<mi>z</mi>\\n      <mi>&#9839;</mi>\\n     </msubsup>\\n    </mrow>\\n    \
+<mo>]</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msqrt>\\n   \
+<mrow>\\n    <msub>\\n     <mi>L</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>(</mo>\\n    <mrow>\\n     <mi>z</mi>\\n     <mo>,</mo>\\n     <mi>z</mi>\
+\\n    </mrow>\\n    <mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>&#183;</mo>\
+\\n  <msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\
+\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  <mtext>,    </mtext>\\n  \
+<mi>z</mi>\\n  <mo>&#8805;</mo>\\n  <mn>1.</mn>\\n </mrow>\\n</math>\\n \
+\\n<h2>veck</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mrow>\\n    <mi>u</mi>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\
+\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n   \
+<mn>2</mn>\\n  </msup>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   <mi>e</mi>\\n   \
+<mrow>\\n    <mo>-</mo>\\n    <msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n   \
+ </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     \
+<mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mtext>| </mtext>\\n  <mi>z</mi>\\n  \
+<msup>\\n   <mo>|</mo>\\n   <mrow>\\n    <mn>2</mn>\\n    <mo>&#8290;</mo>\\n \
+   <mi>k</mi>\\n    <mo>-</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<msup>\\n   <mi>e</mi>\\n   <mrow>\\n    <msub>\\n     <mi>Q</mi>\\n     \
+<mn>0</mn>\\n    </msub>\\n    <mo>&#8290;</mo>\\n    <mrow>\\n     \
+<mo>(</mo>\\n     <mi>z</mi>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  \
+</msup>\\n  <mo>,</mo>\\n </mrow>\\n</math>\\n \\n<h2>s:in</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mtext>| </mtext>\\n   <mi>z</mi>\\n   <msup>\\n    <mo>|</mo>\\n    \
+<mrow>\\n     <mn>2</mn>\\n     <mo>&#8290;</mo>\\n     <mi>k</mi>\\n     \
+<mo>-</mo>\\n     <mn>2</mn>\\n    </mrow>\\n   </msup>\\n   <mi>c</mi>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>R</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mi>R</mi>\\n    \
+ <mn>0</mn>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mn>2</mn>\\n  </msub>\\n  <mtext>| </mtext>\\n  \
+<mi>z</mi>\\n  <msup>\\n   <mo>|</mo>\\n   <mrow>\\n    <mi>k</mi>\\n    \
+<mo>-</mo>\\n    <mn>1</mn>\\n   </mrow>\\n  </msup>\\n  <mtext>,  \
+</mtext>\\n  <mi>c</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   \
+<mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>&#63449;</mo>\\n  <msub>\\n   \
+<mi>Q</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>z</mi>\\n    <mo>/</mo>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <mo>|</mo>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>u-est</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msub>\\n   \
+<mi>R</mi>\\n   <mn>0</mn>\\n  </msub>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mi>z</mi>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mn>1</mn>\\n    <mo>+</mo>\\n    <mtext>| \
+</mtext>\\n    <mi>z</mi>\\n    <msup>\\n     <mo>|</mo>\\n     <mrow>\\n     \
+ <mn>4</mn>\\n      <mo>&#8290;</mo>\\n      <mi>k</mi>\\n      <mo>-</mo>\\n \
+     <mn>2</mn>\\n     </mrow>\\n    </msup>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n </mrow>\\n</math>\\n \\n<h2>aests</h2>\\n<p>Sorry, I failed to \
+interpret that as latex math</p>\\n \\n<h2>viso</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mi>F</mi>\\n  \
+<mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\
+\\n    <mo>,</mo>\\n    <mi>&#969;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  \
+</mrow>\\n  <mo>&#63449;</mo>\\n  <mn>1</mn>\\n  <mo>+</mo>\\n  <mi>O</mi>\\n \
+ <mo>&#8290;</mo>\\n  <mrow>\\n   <mo>(</mo>\\n   <mrow>\\n    \
+<mi>&#950;</mi>\\n    <mo>-</mo>\\n    <mi>&#969;</mi>\\n   </mrow>\\n   \
+<mo>)</mo>\\n  </mrow>\\n  <mtext>,  </mtext>\\n  <mn>2</mn>\\n  \
+<mo>&#8290;</mo>\\n  <mi>F</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#950;</mi>\\n    <mo>,</mo>\\n    \
+<mi>&#969;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  \
+<mo>&#63449;</mo>\\n  <mi>O</mi>\\n  <mo>&#8290;</mo>\\n  <mrow>\\n   \
+<mo>(</mo>\\n   <mrow>\\n    <mi>&#969;</mi>\\n    <mo>-</mo>\\n    \
+<mi>&#950;</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n  <mo>.</mo>\\n \
+</mrow>\\n</math>\\n \\n<h2>taly</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mo>-</mo>\\n    <mi>n</mi>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mrow>\\n      \
+<msub>\\n       <mi>Q</mi>\\n       <mn>0</mn>\\n      </msub>\\n      \
+<mo>&#8290;</mo>\\n      <mrow>\\n       <mo>(</mo>\\n       \
+<mi>&#969;</mi>\\n       <mo>)</mo>\\n      </mrow>\\n      <mo>/</mo>\\n     \
+ <mn>2</mn>\\n      <mo>-</mo>\\n      <msub>\\n       <mi>A</mi>\\n       \
+<mn>0</mn>\\n      </msub>\\n      <mo>&#8290;</mo>\\n      <mrow>\\n       \
+<mo>(</mo>\\n       <mrow>\\n        <mi>&#950;</mi>\\n        <mo>,</mo>\\n  \
+      <mi>&#969;</mi>\\n       </mrow>\\n       <mo>)</mo>\\n      </mrow>\\n \
+    </mrow>\\n     <mo>)</mo>\\n    </mrow>\\n   </mrow>\\n  </msup>\\n  \
+<mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mi>n</mi>\\n    <mo>&#8290;</mo>\\n    \
+<msub>\\n     <mi>Q</mi>\\n     <mn>0</mn>\\n    </msub>\\n    \
+<mo>&#8290;</mo>\\n    <mrow>\\n     <mo>(</mo>\\n     <mi>&#950;</mi>\\n     \
+<mo>)</mo>\\n    </mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  \
+</msup>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>hk1:eq</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mi>n</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mrow>\\n \
+    <mi>&#950;</mi>\\n     <mo>,</mo>\\n     <mi>&#950;</mi>\\n    </mrow>\\n \
+   <mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    \
+<mi>&#960;</mi>\\n    <mi>n</mi>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   \
+<mrow>\\n    <mo>[</mo>\\n    <mrow>\\n     <msub>\\n      <mi>&#967;</mi>\\n \
+     <mi>&#950;</mi>\\n     </msub>\\n     <mo>&#8290;</mo>\\n     <msup>\\n  \
+    <mi>&#950;</mi>\\n      <mi>&#9839;</mi>\\n     </msup>\\n    </mrow>\\n  \
+  <mo>]</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    \
+<mo>(</mo>\\n    <mi>&#950;</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n \
+ <mo>&#8804;</mo>\\n  <mi>C</mi>\\n  <mo>&#8290;</mo>\\n  <msubsup>\\n   \
+<mi>r</mi>\\n   <mi>n</mi>\\n   <mtext>-1</mtext>\\n  </msubsup>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mo>&#8202;</mo>\
+\\n     <mi>n</mi>\\n    </msub>\\n    <mo>(</mo>\\n    <mrow>\\n     \
+<mi>&#950;</mi>\\n     <mo>,</mo>\\n     <mi>&#950;</mi>\\n    </mrow>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>&#183;</mo>\\n  <msup>\\n   \
+<mi>e</mi>\\n   <mrow>\\n    <mi>Q</mi>\\n    <mo>&#8290;</mo>\\n    \
+<mrow>\\n     <mo>(</mo>\\n     <mi>&#950;</mi>\\n     <mo>)</mo>\\n    \
+</mrow>\\n    <mo>/</mo>\\n    <mn>2</mn>\\n   </mrow>\\n  </msup>\\n  \
+<mo>.</mo>\\n </mrow>\\n</math>\\n \\n<h2>wilp</h2>\\n<p>Sorry, I failed to \
+interpret that as latex math</p>\\n \\n<h2>fup</h2>\\n<math \
+xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<msub>\\n    <mi>R</mi>\\n    <mi>n</mi>\\n   </msub>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <msub>\\n    <mi>Q</mi>\\n    \
+<mn>0</mn>\\n   </msub>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n \
+   <mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <msub>\\n     <mi>R</mi>\\n    \
+ <mi>n</mi>\\n    </msub>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   \
+<mi>C</mi>\\n   <mn>2</mn>\\n  </msub>\\n  <mo>.</mo>\\n </mrow>\\n</math>\\n \
+\\n<h2>woul</h2>\\n<math xmlns='http://www.w3.org/1998/Math/MathML'\\n    \
+mathematica:form='StandardForm'\\n    \
+xmlns:mathematica='http://www.wolfram.com/XML/'>\\n <mrow>\\n  <mrow>\\n   \
+<mi>R</mi>\\n   <mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    \
+<mi>z</mi>\\n    <mo>)</mo>\\n   </mrow>\\n   <mo>-</mo>\\n   <mi>c</mi>\\n   \
+<mo>&#8290;</mo>\\n   <mrow>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    \
+<mo>)</mo>\\n   </mrow>\\n   <mo>&#8290;</mo>\\n   <msup>\\n    <mi>z</mi>\\n \
+   <mrow>\\n     <mn>2</mn>\\n     <mo>&#8290;</mo>\\n     <mi>k</mi>\\n     \
+<mo>-</mo>\\n     <mn>2</mn>\\n    </mrow>\\n   </msup>\\n  </mrow>\\n  \
+<mo>&#8804;</mo>\\n  <msub>\\n   <mi>C</mi>\\n   <mn>1</mn>\\n  </msub>\\n  \
+<mo>&#8290;</mo>\\n  <msqrt>\\n   <mrow>\\n    <mi>R</mi>\\n    \
+<mo>&#8289;</mo>\\n    <mo>(</mo>\\n    <mi>z</mi>\\n    <mo>)</mo>\\n   \
+</mrow>\\n  </msqrt>\\n  <mo>+</mo>\\n  <msub>\\n   <mi>C</mi>\\n   \
+<mn>2</mn>\\n  </msub>\\n  <mtext>,    </mtext>\\n  <mrow>\\n   <mo>(</mo>\\n \
+  <mrow>\\n    <mtext>| </mtext>\\n    <mi>z</mi>\\n    <mo>|</mo>\\n    \
+<mo>&#8805;</mo>\\n    <mi>M</mi>\\n   </mrow>\\n   <mo>)</mo>\\n  </mrow>\\n \
+ <mo>,</mo>\\n </mrow>\\n</math>\\n \\n</body>\\n</html>\\n\"\>"], "Output"]
 }, Open  ]]
 },
 WindowSize->{1413, 813},
@@ -565,26 +2571,86 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14055, 288, 2053, "Code"],
+Cell[558, 20, 14986, 308, 2133, "Code"],
 Cell[CellGroupData[{
-Cell[14638, 312, 1180, 32, 33, "Input"],
-Cell[15821, 346, 991, 27, 33, "Output"]
+Cell[15569, 332, 1180, 32, 33, "Input"],
+Cell[16752, 366, 991, 27, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16849, 378, 161, 4, 31, "Input"],
-Cell[17013, 384, 991, 27, 33, "Output"]
+Cell[17780, 398, 161, 4, 31, "Input"],
+Cell[17944, 404, 991, 27, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18041, 416, 1327, 37, 55, "Input"],
-Cell[19371, 455, 991, 27, 33, "Output"]
+Cell[18972, 436, 1327, 37, 55, "Input"],
+Cell[20302, 475, 991, 27, 33, "Output"]
 }, Open  ]],
-Cell[20377, 485, 273, 7, 72, "Input"],
+Cell[21308, 505, 367, 10, 92, "Input"],
 Cell[CellGroupData[{
-Cell[20675, 496, 221, 6, 31, "Input"],
-Cell[20899, 504, 1371, 21, 141, "Message"],
-Cell[22273, 527, 771, 13, 56, "Message"],
-Cell[23047, 542, 32, 0, 23, "Print"],
-Cell[23082, 544, 326, 4, 332, "Output"]
+Cell[21700, 519, 251, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[21976, 530, 940, 12, 974, "Print"],
+Cell[22919, 544, 1357, 18, 1430, "Print"],
+Cell[24279, 564, 826, 11, 803, "Print"],
+Cell[25108, 577, 854, 11, 746, "Print"],
+Cell[25965, 590, 3023, 39, 2798, "Print"],
+Cell[28991, 631, 620, 8, 575, "Print"],
+Cell[29614, 641, 1726, 23, 1848, "Print"],
+Cell[31343, 666, 1248, 17, 1240, "Print"],
+Cell[32594, 685, 408, 5, 366, "Print"],
+Cell[33005, 692, 1111, 14, 1164, "Print"],
+Cell[34119, 708, 1001, 13, 1050, "Print"],
+Cell[35123, 723, 829, 11, 841, "Print"],
+Cell[35955, 736, 689, 9, 689, "Print"],
+Cell[36647, 747, 878, 11, 879, "Print"],
+Cell[37528, 760, 341, 4, 309, "Print"],
+Cell[37872, 766, 932, 13, 993, "Print"],
+Cell[38807, 781, 970, 13, 974, "Print"],
+Cell[39780, 796, 1157, 15, 1259, "Print"],
+Cell[40940, 813, 1613, 21, 1696, "Print"],
+Cell[42556, 836, 4360, 56, 3330, "Print"],
+Cell[46919, 894, 1907, 25, 1962, "Print"],
+Cell[48829, 921, 1763, 23, 1791, "Print"],
+Cell[50595, 946, 1226, 16, 1316, "Print"],
+Cell[51824, 964, 2837, 36, 2285, "Print"],
+Cell[54664, 1002, 1134, 15, 1183, "Print"],
+Cell[55801, 1019, 900, 11, 917, "Print"],
+Cell[56704, 1032, 1125, 14, 1107, "Print"],
+Cell[57832, 1048, 5019, 65, 4280, "Print"],
+Cell[62854, 1115, 362, 4, 347, "Print"],
+Cell[63219, 1121, 8481, 109, 6047, "Print"],
+Cell[71703, 1232, 471, 6, 423, "Print"],
+Cell[72177, 1240, 614, 8, 613, "Print"],
+Cell[72794, 1250, 1091, 15, 1145, "Print"],
+Cell[73888, 1267, 1003, 13, 1031, "Print"],
+Cell[74894, 1282, 1381, 19, 1392, "Print"]
+}, Open  ]],
+Cell[76290, 1304, 223, 6, 21, "Message"],
+Cell[76516, 1312, 90, 1, 23, "Print"],
+Cell[76609, 1315, 223, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[76857, 1325, 90, 1, 23, "Print"],
+Cell[76950, 1328, 909, 12, 860, "Print"],
+Cell[77862, 1342, 2642, 34, 2475, "Print"],
+Cell[80507, 1378, 1090, 15, 1126, "Print"],
+Cell[81600, 1395, 1621, 22, 1715, "Print"],
+Cell[83224, 1419, 1164, 15, 1240, "Print"],
+Cell[84391, 1436, 1662, 22, 1829, "Print"],
+Cell[86056, 1460, 760, 10, 746, "Print"]
+}, Open  ]],
+Cell[86831, 1473, 223, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[87079, 1483, 90, 1, 23, "Print"],
+Cell[87172, 1486, 1092, 15, 1107, "Print"],
+Cell[88267, 1503, 1359, 18, 1335, "Print"],
+Cell[89629, 1523, 1594, 21, 1639, "Print"]
+}, Open  ]],
+Cell[91238, 1547, 220, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[91483, 1557, 90, 1, 23, "Print"],
+Cell[91576, 1560, 931, 13, 993, "Print"],
+Cell[92510, 1575, 1218, 16, 1278, "Print"]
+}, Open  ]],
+Cell[93743, 1594, 70308, 960, 71712, "Output"]
 }, Open  ]]
 }
 ]
