@@ -10,14 +10,1136 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    167276,       2650]
-NotebookOptionsPosition[    164067,       2557]
-NotebookOutlinePosition[    164415,       2572]
-CellTagsIndexPosition[    164372,       2569]
+NotebookDataLength[    230993,       4143]
+NotebookOptionsPosition[    226709,       4018]
+NotebookOutlinePosition[    227057,       4033]
+CellTagsIndexPosition[    227014,       4030]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"bin", "=", 
+  RowBox[{"CreateDatabin", "[", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<Interpretation\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<id\>\"", "\[Rule]", "\"\<String\>\""}], ",", 
+       RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<String\>\""}], ",", 
+       RowBox[{"\"\<time\>\"", "\[Rule]", "\"\<String\>\""}]}], "}"}]}], 
+    "|>"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"KeyExistsQ", "::", "invrl"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The argument \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"APIFunction\\\", \\\"[\\\", RowBox[{RowBox[{\\\
+\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"Clear\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"DataDrop`*\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"DataDrop`Private`*\\\\\\\"\\\"}], \\\"]\\\"}], \\\";\\\", \
+RowBox[{\\\"Get\\\", \\\"[\\\", RowBox[{\\\"FileNameJoin\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"datadropsource\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Gateway\\\\\\\"\\\", \\\"<>\\\", \
+\\\"\\\\\\\"Dump.mx\\\\\\\"\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \\\"]\\\"}], \
+\\\";\\\", RowBox[{\\\"DataDrop`Gateway\\\", \\\"[\\\", \
+RowBox[{\\\"getallparams\\\", \\\"[\\\", \\\"#1\\\", \\\"]\\\"}], \
+\\\"]\\\"}]}], \\\")\\\"}], \\\"&\\\"}]}], \\\"]\\\"}]\\)\[NoBreak] is not a \
+valid Association or a list of rules. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
+\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/KeyExistsQ\\\", ButtonNote -> \
+\\\"KeyExistsQ::invrl\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Databin", "::", "invres"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"A valid response could not be obtained. Please try again \
+later. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Databin\\\", ButtonNote -> \
+\\\"Databin::invres\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Databin",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False}, 
+    PanelBox[
+     PaneSelectorBox[{False->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquarePlusIconMedium"],
+            ImageSizeCache->{12., {0., 12.}}],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = True),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[
+          {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+           0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+           FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 
+             2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {
+             0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+             0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {
+             0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+             0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{15.646999999999998`, 
+             5.933000000000001}, {13.585, 7.263}, {15.533, 8.458}, {17.332, 
+             7.363999999999999}, {15.646999999999998`, 5.933000000000001}}, {{
+             12.697, 3.425}, {10.245, 5.212}, {12.491, 6.591}, {
+             14.725999999999999`, 5.1499999999999995`}, {12.697, 3.425}}, {{
+             8.666, 0.}, {5.978000000000001, 2.285}, {8.666, 4.244}, {
+             11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 3.425}, {
+             2.606, 5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {
+             4.635, 3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+             3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+             5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+             "]}]},
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+              Magnification])]},
+          PlotRange->{{0., 18.}, {0., 19.}},
+          PlotRangePadding->2.5], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Name: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Arxiv-Importer\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Entry count: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              DynamicBox[ToBoxes[
+                Lookup[
+                 Replace[
+                  
+                  DataDropClient`Private`datadropclientcache[{
+                   "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                StandardForm],
+               ImageSizeCache->{6., {0., 9.}}],
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquareMinusIconMedium"],
+            ImageSizeCache->{12., {0., 12.}}],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = False),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[
+          {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+           0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+           FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 
+             2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {
+             0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+             0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {
+             0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+             0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{15.646999999999998`, 
+             5.933000000000001}, {13.585, 7.263}, {15.533, 8.458}, {17.332, 
+             7.363999999999999}, {15.646999999999998`, 5.933000000000001}}, {{
+             12.697, 3.425}, {10.245, 5.212}, {12.491, 6.591}, {
+             14.725999999999999`, 5.1499999999999995`}, {12.697, 3.425}}, {{
+             8.666, 0.}, {5.978000000000001, 2.285}, {8.666, 4.244}, {
+             11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 3.425}, {
+             2.606, 5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {
+             4.635, 3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+             3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+             5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+             "]}]},
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+              Magnification])]},
+          PlotRange->{{0., 18.}, {0., 19.}},
+          PlotRangePadding->2.5], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Name: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Arxiv-Importer\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Entry count: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              DynamicBox[ToBoxes[
+                Lookup[
+                 Replace[
+                  
+                  DataDropClient`Private`datadropclientcache[{
+                   "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                StandardForm],
+               ImageSizeCache->{6., {0., 9.}}],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Short ID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"bqDYNw5Y\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"UUID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"DDf67329559b3-4553-4c30-a8a0-54b0a3623eea\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"ShortURL: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              TagBox[
+               ButtonBox[
+                
+                PaneSelectorBox[{False->"\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                 True->
+                 
+                 StyleBox["\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                  "HyperlinkActive"]}, Dynamic[
+                  CurrentValue["MouseOver"]],
+                 BaseStyle->{"Hyperlink"},
+                 FrameMargins->0,
+                 ImageSize->Automatic],
+                BaseStyle->"Hyperlink",
+                ButtonData->{
+                  URL["https://wolfr.am/bqDYNw5Y"], None},
+                ButtonNote->"https://wolfr.am/bqDYNw5Y"],
+               Annotation[#, "https://wolfr.am/bqDYNw5Y", "Hyperlink"]& ],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Creator: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"blindandwise@gmail.com\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Owner: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"blindandwise@gmail.com\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Creation date: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Wed 23 Mar 2016 17:47:57\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Latest date: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              DynamicBox[ToBoxes[
+                Replace[
+                 Lookup[
+                  Replace[
+                   
+                   DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Timestamp", 
+                  Missing[]], Pattern[DataDropClient`Private`date, 
+                   Blank[DateObject]] :> 
+                 DateString[DataDropClient`Private`date], {0}], StandardForm],
+               ImageSizeCache->{48., {3., 9.}}],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Size: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              DynamicBox[ToBoxes[
+                Round[
+                 Lookup[
+                  Replace[
+                   
+                   DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Size", 0]], 
+                StandardForm], 0.1,
+               ImageSizeCache->{29., {7., 15.}}],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Latest: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              DynamicBox[ToBoxes[
+                Lookup[
+                 Replace[
+                  
+                  DataDropClient`Private`datadropclientcache[{
+                   "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Data", 
+                 Missing[]], StandardForm],
+               ImageSizeCache->{48., {3., 9.}}],
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+      Typeset`open$$],
+      ImageSize->Automatic],
+     BaselinePosition->Baseline],
+    DynamicModuleValues:>{}], "]"}],
+  Databin["bqDYNw5Y"],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToString", "@", 
+  RowBox[{"UnixTime", "[", "]"}]}]], "Input"],
+
+Cell[BoxData["\<\"1458769728\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DateString", "@", "Now"}]], "Input"],
+
+Cell[BoxData["\<\"Wed 23 Mar 2016 17:49:06\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Databins", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"KeyExistsQ", "::", "invrl"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The argument \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"APIFunction\\\", \\\"[\\\", RowBox[{RowBox[{\\\
+\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"Clear\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"DataDrop`*\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"DataDrop`Private`*\\\\\\\"\\\"}], \\\"]\\\"}], \\\";\\\", \
+RowBox[{\\\"Get\\\", \\\"[\\\", RowBox[{\\\"FileNameJoin\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"datadropsource\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Gateway\\\\\\\"\\\", \\\"<>\\\", \
+\\\"\\\\\\\"Dump.mx\\\\\\\"\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \\\"]\\\"}], \
+\\\";\\\", RowBox[{\\\"DataDrop`Gateway\\\", \\\"[\\\", \
+RowBox[{\\\"getallparams\\\", \\\"[\\\", \\\"#1\\\", \\\"]\\\"}], \
+\\\"]\\\"}]}], \\\")\\\"}], \\\"&\\\"}]}], \\\"]\\\"}]\\)\[NoBreak] is not a \
+valid Association or a list of rules. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
+\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/KeyExistsQ\\\", ButtonNote -> \
+\\\"KeyExistsQ::invrl\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Databins", "::", "err1"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The databins service is unavailable. Please try again \
+later. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Databins\\\", ButtonNote -> \
+\\\"Databins::err1\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DatabinAdd", "[", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{
+     TagBox["Databin",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = True}, 
+      PanelBox[
+       PaneSelectorBox[{False->GridBox[{
+          {
+           PaneBox[
+            ButtonBox[
+             
+             DynamicBox[FEPrivate`FrontEndResource[
+              "FEBitmaps", "SquarePlusIconMedium"],
+              ImageSizeCache->{12., {0., 12.}}],
+             Appearance->None,
+             ButtonFunction:>(Typeset`open$$ = True),
+             Evaluator->Automatic,
+             Method->"Preemptive"],
+            Alignment->{Center, Center},
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]], 
+           GraphicsBox[
+            {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+             0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{
+               0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+               0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {
+               0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 
+               2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {
+               0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{
+               15.646999999999998`, 5.933000000000001}, {13.585, 7.263}, {
+               15.533, 8.458}, {17.332, 7.363999999999999}, {
+               15.646999999999998`, 5.933000000000001}}, {{12.697, 3.425}, {
+               10.245, 5.212}, {12.491, 6.591}, {14.725999999999999`, 
+               5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+               5.978000000000001, 2.285}, {8.666, 4.244}, {
+               11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 3.425}, {
+               2.606, 5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {
+               4.635, 3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+               3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+               5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+               "]}]},
+            AspectRatio->1,
+            Axes->False,
+            Background->GrayLevel[0.93],
+            Frame->True,
+            FrameStyle->Directive[
+              Thickness[Tiny], 
+              GrayLevel[0.55]],
+            FrameTicks->None,
+            ImageSize->{Automatic, 
+              Dynamic[
+              3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                Magnification])]},
+            PlotRange->{{0., 18.}, {0., 19.}},
+            PlotRangePadding->2.5], GridBox[{
+             {
+              RowBox[{
+               TagBox["\<\"Name: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"Arxiv-Importer\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Entry count: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                DynamicBox[ToBoxes[
+                  Lookup[
+                   Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                  StandardForm],
+                 ImageSizeCache->{6., {0., 9.}}],
+                "SummaryItem"]}]}
+            },
+            AutoDelete->False,
+            
+            BaseStyle->{
+             ShowStringCharacters -> False, NumberMarks -> False, 
+              PrintPrecision -> 3, ShowSyntaxStyles -> False},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Rows" -> {{Top}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->
+        GridBox[{
+          {
+           PaneBox[
+            ButtonBox[
+             
+             DynamicBox[FEPrivate`FrontEndResource[
+              "FEBitmaps", "SquareMinusIconMedium"],
+              ImageSizeCache->{12., {0., 12.}}],
+             Appearance->None,
+             ButtonFunction:>(Typeset`open$$ = False),
+             Evaluator->Automatic,
+             Method->"Preemptive"],
+            Alignment->{Center, Center},
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]], 
+           GraphicsBox[
+            {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+             0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{
+               0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+               0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {
+               0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 
+               2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {
+               0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{
+               15.646999999999998`, 5.933000000000001}, {13.585, 7.263}, {
+               15.533, 8.458}, {17.332, 7.363999999999999}, {
+               15.646999999999998`, 5.933000000000001}}, {{12.697, 3.425}, {
+               10.245, 5.212}, {12.491, 6.591}, {14.725999999999999`, 
+               5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+               5.978000000000001, 2.285}, {8.666, 4.244}, {
+               11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 3.425}, {
+               2.606, 5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {
+               4.635, 3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+               3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+               5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+               "]}]},
+            AspectRatio->1,
+            Axes->False,
+            Background->GrayLevel[0.93],
+            Frame->True,
+            FrameStyle->Directive[
+              Thickness[Tiny], 
+              GrayLevel[0.55]],
+            FrameTicks->None,
+            ImageSize->{Automatic, 
+              Dynamic[
+              3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                Magnification])]},
+            PlotRange->{{0., 18.}, {0., 19.}},
+            PlotRangePadding->2.5], GridBox[{
+             {
+              RowBox[{
+               TagBox["\<\"Name: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"Arxiv-Importer\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Entry count: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                DynamicBox[ToBoxes[
+                  Lookup[
+                   Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                  StandardForm],
+                 ImageSizeCache->{6., {0., 9.}}],
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Short ID: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"bqDYNw5Y\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"UUID: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"DDf67329559b3-4553-4c30-a8a0-54b0a3623eea\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"ShortURL: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                TagBox[
+                 ButtonBox[
+                  
+                  PaneSelectorBox[{False->"\<\"https://wolfr.am/bqDYNw5Y\"\>",
+                    True->
+                   
+                   StyleBox["\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                    "HyperlinkActive"]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                   BaseStyle->{"Hyperlink"},
+                   FrameMargins->0,
+                   ImageSize->Automatic],
+                  BaseStyle->"Hyperlink",
+                  ButtonData->{
+                    URL["https://wolfr.am/bqDYNw5Y"], None},
+                  ButtonNote->"https://wolfr.am/bqDYNw5Y"],
+                 Annotation[#, "https://wolfr.am/bqDYNw5Y", "Hyperlink"]& ],
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Creator: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"blindandwise@gmail.com\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Owner: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"blindandwise@gmail.com\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Creation date: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox["\<\"Wed 23 Mar 2016 17:47:57\"\>",
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Latest date: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                DynamicBox[ToBoxes[
+                  Replace[
+                   Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Timestamp", 
+                    Missing[]], Pattern[DataDropClient`Private`date, 
+                    Blank[DateObject]] :> 
+                   DateString[DataDropClient`Private`date], {0}], 
+                  StandardForm],
+                 ImageSizeCache->{48., {3., 9.}}],
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Size: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                DynamicBox[ToBoxes[
+                  Round[
+                   Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Size", 0]], 
+                  StandardForm], 0.1,
+                 ImageSizeCache->{6., {0., 9.}}],
+                "SummaryItem"]}]},
+             {
+              RowBox[{
+               TagBox["\<\"Latest: \"\>",
+                "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+               TagBox[
+                DynamicBox[ToBoxes[
+                  Lookup[
+                   Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Data", 
+                   Missing[]], StandardForm],
+                 ImageSizeCache->{48., {3., 9.}}],
+                "SummaryItem"]}]}
+            },
+            AutoDelete->False,
+            
+            BaseStyle->{
+             ShowStringCharacters -> False, NumberMarks -> False, 
+              PrintPrecision -> 3, ShowSyntaxStyles -> False},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Rows" -> {{Top}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+        Typeset`open$$],
+        ImageSize->Automatic],
+       BaselinePosition->Baseline],
+      DynamicModuleValues:>{}], "]"}],
+    Databin["bqDYNw5Y"],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<id\>\"", "\[Rule]", "\"\<test2\>\""}], ",", 
+     RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<2\>\""}], ",", 
+     RowBox[{"\"\<time\>\"", "->", 
+      RowBox[{"DateString", "[", "]"}]}]}], "|>"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"KeyExistsQ", "::", "invrl"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The argument \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"APIFunction\\\", \\\"[\\\", RowBox[{RowBox[{\\\
+\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"Clear\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"DataDrop`*\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"DataDrop`Private`*\\\\\\\"\\\"}], \\\"]\\\"}], \\\";\\\", \
+RowBox[{\\\"Get\\\", \\\"[\\\", RowBox[{\\\"FileNameJoin\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"datadropsource\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Gateway\\\\\\\"\\\", \\\"<>\\\", \
+\\\"\\\\\\\"Dump.mx\\\\\\\"\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \\\"]\\\"}], \
+\\\";\\\", RowBox[{\\\"DataDrop`Gateway\\\", \\\"[\\\", \
+RowBox[{\\\"getallparams\\\", \\\"[\\\", \\\"#1\\\", \\\"]\\\"}], \
+\\\"]\\\"}]}], \\\")\\\"}], \\\"&\\\"}]}], \\\"]\\\"}]\\)\[NoBreak] is not a \
+valid Association or a list of rules. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
+\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/KeyExistsQ\\\", ButtonNote -> \
+\\\"KeyExistsQ::invrl\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Databin", "::", "nobin"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified databin \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"bqDYNw5Y\\\\\\\"\\\"}]\\)\[NoBreak] \
+could not be found. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Databin\\\", ButtonNote -> \\\"Databin::nobin\\\"]\
+\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Values", "@", 
+  InterpretationBox[
+   RowBox[{
+    TagBox["Databin",
+     "SummaryHead"], "[", 
+    DynamicModuleBox[{Typeset`open$$ = False}, 
+     PanelBox[
+      PaneSelectorBox[{False->GridBox[{
+         {
+          PaneBox[
+           ButtonBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "FEBitmaps", "SquarePlusIconMedium"],
+             ImageSizeCache->{12., {0., 12.}}],
+            Appearance->None,
+            ButtonFunction:>(Typeset`open$$ = True),
+            Evaluator->Automatic,
+            Method->"Preemptive"],
+           Alignment->{Center, Center},
+           
+           ImageSize->
+            Dynamic[{
+             Automatic, 3.5 CurrentValue["FontCapHeight"]/
+              AbsoluteCurrentValue[Magnification]}]], 
+          GraphicsBox[
+           {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+            0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0,
+               2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+              0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+               1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+              0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 
+              1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{
+              15.646999999999998`, 5.933000000000001}, {13.585, 7.263}, {
+              15.533, 8.458}, {17.332, 7.363999999999999}, {
+              15.646999999999998`, 5.933000000000001}}, {{12.697, 3.425}, {
+              10.245, 5.212}, {12.491, 6.591}, {14.725999999999999`, 
+              5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+              5.978000000000001, 2.285}, {8.666, 4.244}, {11.354000000000001`,
+               2.285}, {8.666, 0.}}, {{4.635, 3.425}, {2.606, 
+              5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {4.635, 
+              3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+              3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+              5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+              "]}]},
+           AspectRatio->1,
+           Axes->False,
+           Background->GrayLevel[0.93],
+           Frame->True,
+           FrameStyle->Directive[
+             Thickness[Tiny], 
+             GrayLevel[0.55]],
+           FrameTicks->None,
+           ImageSize->{Automatic, 
+             Dynamic[
+             3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+               Magnification])]},
+           PlotRange->{{0., 18.}, {0., 19.}},
+           PlotRangePadding->2.5], GridBox[{
+            {
+             RowBox[{
+              TagBox["\<\"Name: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"Arxiv-Importer\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Entry count: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[
+                 Lookup[
+                  Replace[
+                   
+                   DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                 StandardForm],
+                ImageSizeCache->{6., {0., 9.}}],
+               "SummaryItem"]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+         {
+          PaneBox[
+           ButtonBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "FEBitmaps", "SquareMinusIconMedium"]],
+            Appearance->None,
+            ButtonFunction:>(Typeset`open$$ = False),
+            Evaluator->Automatic,
+            Method->"Preemptive"],
+           Alignment->{Center, Center},
+           
+           ImageSize->
+            Dynamic[{
+             Automatic, 3.5 CurrentValue["FontCapHeight"]/
+              AbsoluteCurrentValue[Magnification]}]], 
+          GraphicsBox[
+           {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+            0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0,
+               2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+              0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+               1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+              0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 
+              1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{
+              15.646999999999998`, 5.933000000000001}, {13.585, 7.263}, {
+              15.533, 8.458}, {17.332, 7.363999999999999}, {
+              15.646999999999998`, 5.933000000000001}}, {{12.697, 3.425}, {
+              10.245, 5.212}, {12.491, 6.591}, {14.725999999999999`, 
+              5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+              5.978000000000001, 2.285}, {8.666, 4.244}, {11.354000000000001`,
+               2.285}, {8.666, 0.}}, {{4.635, 3.425}, {2.606, 
+              5.1499999999999995`}, {4.841, 6.591}, {7.087, 5.212}, {4.635, 
+              3.425}}, {{0., 7.363999999999999}, {1.799, 8.458}, {
+              3.7470000000000003`, 7.263}, {1.6840000000000002`, 
+              5.933000000000001}, {0., 7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+              "]}]},
+           AspectRatio->1,
+           Axes->False,
+           Background->GrayLevel[0.93],
+           Frame->True,
+           FrameStyle->Directive[
+             Thickness[Tiny], 
+             GrayLevel[0.55]],
+           FrameTicks->None,
+           ImageSize->{Automatic, 
+             Dynamic[
+             3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+               Magnification])]},
+           PlotRange->{{0., 18.}, {0., 19.}},
+           PlotRangePadding->2.5], GridBox[{
+            {
+             RowBox[{
+              TagBox["\<\"Name: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"Arxiv-Importer\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Entry count: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[
+                 Lookup[
+                  Replace[
+                   
+                   DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                 StandardForm]],
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Short ID: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"bqDYNw5Y\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"UUID: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"DDf67329559b3-4553-4c30-a8a0-54b0a3623eea\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"ShortURL: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               TagBox[
+                ButtonBox[
+                 
+                 PaneSelectorBox[{False->"\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                  True->
+                  
+                  StyleBox["\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                   "HyperlinkActive"]}, Dynamic[
+                   CurrentValue["MouseOver"]],
+                  BaseStyle->{"Hyperlink"},
+                  FrameMargins->0,
+                  ImageSize->Automatic],
+                 BaseStyle->"Hyperlink",
+                 ButtonData->{
+                   URL["https://wolfr.am/bqDYNw5Y"], None},
+                 ButtonNote->"https://wolfr.am/bqDYNw5Y"],
+                Annotation[#, "https://wolfr.am/bqDYNw5Y", "Hyperlink"]& ],
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Creator: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"blindandwise@gmail.com\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Owner: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"blindandwise@gmail.com\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Creation date: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"Wed 23 Mar 2016 17:47:57\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Latest date: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[
+                 Replace[
+                  Lookup[
+                   Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Timestamp", 
+                   Missing[]], Pattern[DataDropClient`Private`date, 
+                    Blank[DateObject]] :> 
+                  DateString[DataDropClient`Private`date], {0}], 
+                 StandardForm]],
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Size: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[
+                 Round[
+                  Lookup[
+                   Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Size", 0]], 
+                 StandardForm], 0.1],
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Latest: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[
+                 Lookup[
+                  Replace[
+                   
+                   DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Data", 
+                  Missing[]], StandardForm]],
+               "SummaryItem"]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+       Typeset`open$$],
+       ImageSize->Automatic],
+      BaselinePosition->Baseline],
+     DynamicModuleValues:>{}], "]"}],
+   Databin["bqDYNw5Y"],
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"id\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"test\"\>", ",", "\<\"test2\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"version\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"2\"\>", ",", "\<\"2\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"time\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Wed 23 Mar 2016 17:49:45\"\>", 
+      ",", "\<\"Wed 23 Mar 2016 17:50:16\"\>"}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output"]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"form", " ", "=", " ", 
@@ -42,6 +1164,345 @@ Cell[BoxData[
             RowBox[{"\"\<Version Number\>\"", " ", "/.", " ", "#"}], 
             "]"}]}]}], "}"}], ",", "\[IndentingNewLine]", "\t", "\n", 
         RowBox[{
+         RowBox[{"DatabinAdd", "[", 
+          RowBox[{
+           InterpretationBox[
+            RowBox[{
+             TagBox["Databin",
+              "SummaryHead"], "[", 
+             DynamicModuleBox[{Typeset`open$$ = False}, 
+              PanelBox[
+               PaneSelectorBox[{False->GridBox[{
+                  {
+                   PaneBox[
+                    ButtonBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SquarePlusIconMedium"],
+                    ImageSizeCache->{12., {0., 12.}}],
+                    Appearance->None,
+                    ButtonFunction:>(Typeset`open$$ = True),
+                    Evaluator->Automatic,
+                    Method->"Preemptive"],
+                    Alignment->{Center, Center},
+                    
+                    ImageSize->
+                    Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                   GraphicsBox[
+                    {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+                    0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2,
+                     0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+                    0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                    0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                    0}, {1, 3, 3}}}, {{{15.646999999999998`, 
+                    5.933000000000001}, {13.585, 7.263}, {15.533, 8.458}, {
+                    17.332, 7.363999999999999}, {15.646999999999998`, 
+                    5.933000000000001}}, {{12.697, 3.425}, {10.245, 5.212}, {
+                    12.491, 6.591}, {14.725999999999999`, 
+                    5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+                    5.978000000000001, 2.285}, {8.666, 4.244}, {
+                    11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 
+                    3.425}, {2.606, 5.1499999999999995`}, {4.841, 6.591}, {
+                    7.087, 5.212}, {4.635, 3.425}}, {{0., 
+                    7.363999999999999}, {1.799, 8.458}, {3.7470000000000003`, 
+                    7.263}, {1.6840000000000002`, 5.933000000000001}, {0., 
+                    7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+                    "]}]},
+                    AspectRatio->1,
+                    Axes->False,
+                    Background->GrayLevel[0.93],
+                    Frame->True,
+                    FrameStyle->Directive[
+                    Thickness[Tiny], 
+                    GrayLevel[0.55]],
+                    FrameTicks->None,
+                    ImageSize->{Automatic, 
+                    Dynamic[
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])]},
+                    PlotRange->{{0., 18.}, {0., 19.}},
+                    PlotRangePadding->2.5], GridBox[{
+                    {
+                    RowBox[{
+                    TagBox["\<\"Name: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"Arxiv-Importer\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Entry count: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    DynamicBox[ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                    StandardForm],
+                    ImageSizeCache->{6., {0., 9.}}],
+                    "SummaryItem"]}]}
+                    },
+                    AutoDelete->False,
+                    
+                    BaseStyle->{
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False},
+                    
+                    GridBoxAlignment->{
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+                 },
+                 AutoDelete->False,
+                 BaselinePosition->{1, 1},
+                 GridBoxAlignment->{"Rows" -> {{Top}}},
+                 
+                 GridBoxItemSize->{
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->
+                GridBox[{
+                  {
+                   PaneBox[
+                    ButtonBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SquareMinusIconMedium"],
+                    ImageSizeCache->{12., {0., 12.}}],
+                    Appearance->None,
+                    ButtonFunction:>(Typeset`open$$ = False),
+                    Evaluator->Automatic,
+                    Method->"Preemptive"],
+                    Alignment->{Center, Center},
+                    
+                    ImageSize->
+                    Dynamic[{
+                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                   GraphicsBox[
+                    {Thickness[0.05555555555555555], FaceForm[{RGBColor[
+                    0.44721600000000006`, 0.519288, 0.528528], Opacity[1.]}], 
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2,
+                     0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+                    0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                    0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                    0}, {1, 3, 3}}}, {{{15.646999999999998`, 
+                    5.933000000000001}, {13.585, 7.263}, {15.533, 8.458}, {
+                    17.332, 7.363999999999999}, {15.646999999999998`, 
+                    5.933000000000001}}, {{12.697, 3.425}, {10.245, 5.212}, {
+                    12.491, 6.591}, {14.725999999999999`, 
+                    5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+                    5.978000000000001, 2.285}, {8.666, 4.244}, {
+                    11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 
+                    3.425}, {2.606, 5.1499999999999995`}, {4.841, 6.591}, {
+                    7.087, 5.212}, {4.635, 3.425}}, {{0., 
+                    7.363999999999999}, {1.799, 8.458}, {3.7470000000000003`, 
+                    7.263}, {1.6840000000000002`, 5.933000000000001}, {0., 
+                    7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+                    "]}]},
+                    AspectRatio->1,
+                    Axes->False,
+                    Background->GrayLevel[0.93],
+                    Frame->True,
+                    FrameStyle->Directive[
+                    Thickness[Tiny], 
+                    GrayLevel[0.55]],
+                    FrameTicks->None,
+                    ImageSize->{Automatic, 
+                    Dynamic[
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])]},
+                    PlotRange->{{0., 18.}, {0., 19.}},
+                    PlotRangePadding->2.5], GridBox[{
+                    {
+                    RowBox[{
+                    TagBox["\<\"Name: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"Arxiv-Importer\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Entry count: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    DynamicBox[ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 0], 
+                    StandardForm],
+                    ImageSizeCache->{6., {0., 9.}}],
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Short ID: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"bqDYNw5Y\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"UUID: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"DDf67329559b3-4553-4c30-a8a0-54b0a3623eea\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"ShortURL: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    ButtonBox[
+                    
+                    PaneSelectorBox[{
+                    False->"\<\"https://wolfr.am/bqDYNw5Y\"\>", True->
+                    
+                    StyleBox["\<\"https://wolfr.am/bqDYNw5Y\"\>", 
+                    "HyperlinkActive"]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{"Hyperlink"},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                    BaseStyle->"Hyperlink",
+                    ButtonData->{
+                    URL["https://wolfr.am/bqDYNw5Y"], None},
+                    ButtonNote->"https://wolfr.am/bqDYNw5Y"],
+                    Annotation[#, "https://wolfr.am/bqDYNw5Y", "Hyperlink"]& ],
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Creator: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"blindandwise@gmail.com\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Owner: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"blindandwise@gmail.com\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Creation date: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\<\"Wed 23 Mar 2016 17:47:57\"\>",
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Latest date: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    DynamicBox[ToBoxes[
+                    Replace[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Timestamp", 
+                    Missing[]], Pattern[DataDropClient`Private`date, 
+                    Blank[DateObject]] :> 
+                    DateString[DataDropClient`Private`date], {0}], 
+                    StandardForm],
+                    ImageSizeCache->{48., {3., 9.}}],
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Size: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    DynamicBox[ToBoxes[
+                    Round[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Size", 0]], 
+                    StandardForm], 0.1,
+                    ImageSizeCache->{29., {7., 15.}}],
+                    "SummaryItem"]}]},
+                    {
+                    RowBox[{
+                    TagBox["\<\"Latest: \"\>",
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    DynamicBox[ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DDf67329559b3-4553-4c30-a8a0-54b0a3623eea"}], Except[
+                    Blank[Association]] -> {}, {0}], "Data", 
+                    Missing[]], StandardForm],
+                    ImageSizeCache->{48., {3., 9.}}],
+                    "SummaryItem"]}]}
+                    },
+                    AutoDelete->False,
+                    
+                    BaseStyle->{
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False},
+                    
+                    GridBoxAlignment->{
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+                 },
+                 AutoDelete->False,
+                 BaselinePosition->{1, 1},
+                 GridBoxAlignment->{"Rows" -> {{Top}}},
+                 
+                 GridBoxItemSize->{
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+                Dynamic[Typeset`open$$],
+                ImageSize->Automatic],
+               BaselinePosition->Baseline],
+              DynamicModuleValues:>{}], "]"}],
+            Databin["bqDYNw5Y"],
+            Editable->False,
+            SelectWithContents->True,
+            Selectable->False], ",", 
+           RowBox[{"<|", 
+            RowBox[{
+             RowBox[{"\"\<id\>\"", "\[Rule]", "arxivID"}], ",", 
+             RowBox[{"\"\<version\>\"", "\[Rule]", "version"}], ",", 
+             RowBox[{"\"\<time\>\"", "->", 
+              RowBox[{"DateString", "[", "]"}]}]}], "|>"}]}], "]"}], ";", 
+         "\n", 
          RowBox[{"str", " ", "=", " ", 
           RowBox[{"URLFetch", "[", 
            RowBox[{
@@ -2571,86 +4032,118 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14986, 308, 2133, "Code"],
 Cell[CellGroupData[{
-Cell[15569, 332, 1180, 32, 33, "Input"],
-Cell[16752, 366, 991, 27, 33, "Output"]
+Cell[580, 22, 412, 10, 31, "Input"],
+Cell[995, 34, 1195, 21, 21, "Message"],
+Cell[2193, 57, 394, 9, 21, "Message"],
+Cell[2590, 68, 34, 0, 31, "Output"]
+}, Open  ]],
+Cell[2639, 71, 13072, 311, 71, "Text"],
+Cell[CellGroupData[{
+Cell[15736, 386, 86, 2, 31, "Input"],
+Cell[15825, 390, 45, 0, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17780, 398, 161, 4, 31, "Input"],
-Cell[17944, 404, 991, 27, 33, "Output"]
+Cell[15907, 395, 60, 1, 31, "Input"],
+Cell[15970, 398, 59, 0, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18972, 436, 1327, 37, 55, "Input"],
-Cell[20302, 475, 991, 27, 33, "Output"]
+Cell[16066, 403, 56, 1, 31, "Input"],
+Cell[16125, 406, 1195, 21, 21, "Message"],
+Cell[17323, 429, 390, 9, 21, "Message"],
+Cell[17716, 440, 34, 0, 31, "Output"]
 }, Open  ]],
-Cell[21308, 505, 367, 10, 92, "Input"],
+Cell[17765, 443, 55, 1, 31, "Input"],
 Cell[CellGroupData[{
-Cell[21700, 519, 251, 7, 31, "Input"],
-Cell[CellGroupData[{
-Cell[21976, 530, 940, 12, 974, "Print"],
-Cell[22919, 544, 1357, 18, 1430, "Print"],
-Cell[24279, 564, 826, 11, 803, "Print"],
-Cell[25108, 577, 854, 11, 746, "Print"],
-Cell[25965, 590, 3023, 39, 2798, "Print"],
-Cell[28991, 631, 620, 8, 575, "Print"],
-Cell[29614, 641, 1726, 23, 1848, "Print"],
-Cell[31343, 666, 1248, 17, 1240, "Print"],
-Cell[32594, 685, 408, 5, 366, "Print"],
-Cell[33005, 692, 1111, 14, 1164, "Print"],
-Cell[34119, 708, 1001, 13, 1050, "Print"],
-Cell[35123, 723, 829, 11, 841, "Print"],
-Cell[35955, 736, 689, 9, 689, "Print"],
-Cell[36647, 747, 878, 11, 879, "Print"],
-Cell[37528, 760, 341, 4, 309, "Print"],
-Cell[37872, 766, 932, 13, 993, "Print"],
-Cell[38807, 781, 970, 13, 974, "Print"],
-Cell[39780, 796, 1157, 15, 1259, "Print"],
-Cell[40940, 813, 1613, 21, 1696, "Print"],
-Cell[42556, 836, 4360, 56, 3330, "Print"],
-Cell[46919, 894, 1907, 25, 1962, "Print"],
-Cell[48829, 921, 1763, 23, 1791, "Print"],
-Cell[50595, 946, 1226, 16, 1316, "Print"],
-Cell[51824, 964, 2837, 36, 2285, "Print"],
-Cell[54664, 1002, 1134, 15, 1183, "Print"],
-Cell[55801, 1019, 900, 11, 917, "Print"],
-Cell[56704, 1032, 1125, 14, 1107, "Print"],
-Cell[57832, 1048, 5019, 65, 4280, "Print"],
-Cell[62854, 1115, 362, 4, 347, "Print"],
-Cell[63219, 1121, 8481, 109, 6047, "Print"],
-Cell[71703, 1232, 471, 6, 423, "Print"],
-Cell[72177, 1240, 614, 8, 613, "Print"],
-Cell[72794, 1250, 1091, 15, 1145, "Print"],
-Cell[73888, 1267, 1003, 13, 1031, "Print"],
-Cell[74894, 1282, 1381, 19, 1392, "Print"]
+Cell[17845, 448, 14010, 324, 227, "Input"],
+Cell[31858, 774, 1195, 21, 21, "Message"],
+Cell[33056, 797, 447, 10, 21, "Message"],
+Cell[33506, 809, 34, 0, 31, "Output"]
 }, Open  ]],
-Cell[76290, 1304, 223, 6, 21, "Message"],
-Cell[76516, 1312, 90, 1, 23, "Print"],
-Cell[76609, 1315, 223, 6, 21, "Message"],
 Cell[CellGroupData[{
-Cell[76857, 1325, 90, 1, 23, "Print"],
-Cell[76950, 1328, 909, 12, 860, "Print"],
-Cell[77862, 1342, 2642, 34, 2475, "Print"],
-Cell[80507, 1378, 1090, 15, 1126, "Print"],
-Cell[81600, 1395, 1621, 22, 1715, "Print"],
-Cell[83224, 1419, 1164, 15, 1240, "Print"],
-Cell[84391, 1436, 1662, 22, 1829, "Print"],
-Cell[86056, 1460, 760, 10, 746, "Print"]
+Cell[33577, 814, 13192, 310, 72, "Input"],
+Cell[46772, 1126, 506, 13, 31, "Output"]
 }, Open  ]],
-Cell[86831, 1473, 223, 6, 21, "Message"],
+Cell[47293, 1142, 30893, 647, 2233, "Code"],
 Cell[CellGroupData[{
-Cell[87079, 1483, 90, 1, 23, "Print"],
-Cell[87172, 1486, 1092, 15, 1107, "Print"],
-Cell[88267, 1503, 1359, 18, 1335, "Print"],
-Cell[89629, 1523, 1594, 21, 1639, "Print"]
+Cell[78211, 1793, 1180, 32, 33, "Input"],
+Cell[79394, 1827, 991, 27, 33, "Output"]
 }, Open  ]],
-Cell[91238, 1547, 220, 6, 21, "Message"],
 Cell[CellGroupData[{
-Cell[91483, 1557, 90, 1, 23, "Print"],
-Cell[91576, 1560, 931, 13, 993, "Print"],
-Cell[92510, 1575, 1218, 16, 1278, "Print"]
+Cell[80422, 1859, 161, 4, 31, "Input"],
+Cell[80586, 1865, 991, 27, 33, "Output"]
 }, Open  ]],
-Cell[93743, 1594, 70308, 960, 71712, "Output"]
+Cell[CellGroupData[{
+Cell[81614, 1897, 1327, 37, 55, "Input"],
+Cell[82944, 1936, 991, 27, 33, "Output"]
+}, Open  ]],
+Cell[83950, 1966, 367, 10, 92, "Input"],
+Cell[CellGroupData[{
+Cell[84342, 1980, 251, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[84618, 1991, 940, 12, 974, "Print"],
+Cell[85561, 2005, 1357, 18, 1430, "Print"],
+Cell[86921, 2025, 826, 11, 803, "Print"],
+Cell[87750, 2038, 854, 11, 746, "Print"],
+Cell[88607, 2051, 3023, 39, 2798, "Print"],
+Cell[91633, 2092, 620, 8, 575, "Print"],
+Cell[92256, 2102, 1726, 23, 1848, "Print"],
+Cell[93985, 2127, 1248, 17, 1240, "Print"],
+Cell[95236, 2146, 408, 5, 366, "Print"],
+Cell[95647, 2153, 1111, 14, 1164, "Print"],
+Cell[96761, 2169, 1001, 13, 1050, "Print"],
+Cell[97765, 2184, 829, 11, 841, "Print"],
+Cell[98597, 2197, 689, 9, 689, "Print"],
+Cell[99289, 2208, 878, 11, 879, "Print"],
+Cell[100170, 2221, 341, 4, 309, "Print"],
+Cell[100514, 2227, 932, 13, 993, "Print"],
+Cell[101449, 2242, 970, 13, 974, "Print"],
+Cell[102422, 2257, 1157, 15, 1259, "Print"],
+Cell[103582, 2274, 1613, 21, 1696, "Print"],
+Cell[105198, 2297, 4360, 56, 3330, "Print"],
+Cell[109561, 2355, 1907, 25, 1962, "Print"],
+Cell[111471, 2382, 1763, 23, 1791, "Print"],
+Cell[113237, 2407, 1226, 16, 1316, "Print"],
+Cell[114466, 2425, 2837, 36, 2285, "Print"],
+Cell[117306, 2463, 1134, 15, 1183, "Print"],
+Cell[118443, 2480, 900, 11, 917, "Print"],
+Cell[119346, 2493, 1125, 14, 1107, "Print"],
+Cell[120474, 2509, 5019, 65, 4280, "Print"],
+Cell[125496, 2576, 362, 4, 347, "Print"],
+Cell[125861, 2582, 8481, 109, 6047, "Print"],
+Cell[134345, 2693, 471, 6, 423, "Print"],
+Cell[134819, 2701, 614, 8, 613, "Print"],
+Cell[135436, 2711, 1091, 15, 1145, "Print"],
+Cell[136530, 2728, 1003, 13, 1031, "Print"],
+Cell[137536, 2743, 1381, 19, 1392, "Print"]
+}, Open  ]],
+Cell[138932, 2765, 223, 6, 21, "Message"],
+Cell[139158, 2773, 90, 1, 23, "Print"],
+Cell[139251, 2776, 223, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[139499, 2786, 90, 1, 23, "Print"],
+Cell[139592, 2789, 909, 12, 860, "Print"],
+Cell[140504, 2803, 2642, 34, 2475, "Print"],
+Cell[143149, 2839, 1090, 15, 1126, "Print"],
+Cell[144242, 2856, 1621, 22, 1715, "Print"],
+Cell[145866, 2880, 1164, 15, 1240, "Print"],
+Cell[147033, 2897, 1662, 22, 1829, "Print"],
+Cell[148698, 2921, 760, 10, 746, "Print"]
+}, Open  ]],
+Cell[149473, 2934, 223, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[149721, 2944, 90, 1, 23, "Print"],
+Cell[149814, 2947, 1092, 15, 1107, "Print"],
+Cell[150909, 2964, 1359, 18, 1335, "Print"],
+Cell[152271, 2984, 1594, 21, 1639, "Print"]
+}, Open  ]],
+Cell[153880, 3008, 220, 6, 21, "Message"],
+Cell[CellGroupData[{
+Cell[154125, 3018, 90, 1, 23, "Print"],
+Cell[154218, 3021, 931, 13, 993, "Print"],
+Cell[155152, 3036, 1218, 16, 1278, "Print"]
+}, Open  ]],
+Cell[156385, 3055, 70308, 960, 71712, "Output"]
 }, Open  ]]
 }
 ]
