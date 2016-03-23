@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    136135,       2170]
-NotebookOptionsPosition[    135149,       2132]
-NotebookOutlinePosition[    135498,       2147]
-CellTagsIndexPosition[    135455,       2144]
+NotebookDataLength[    136258,       2171]
+NotebookOptionsPosition[    135273,       2133]
+NotebookOutlinePosition[    135621,       2148]
+CellTagsIndexPosition[    135578,       2145]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -254,9 +254,10 @@ from?\>\""}], ",", " ", "\n",
          RowBox[{
          "\"\<Description\>\"", " ", "\[Rule]", " ", 
           "\"\<Enter an arxiv article number in the form of ____._____, where \
-each _ represents a number digit. Optionally enter a version number.\>\""}]}],
-         "\n", "|>"}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
-  "\n"}], "\n", 
+each _ represents a number digit. <br>Optionally enter a version number, it \
+defults to 1.<br>The source for this app is at <a \
+href=\\\"https://github.com/KyleKeane/arxiv-a11y-importer\\\">GitHub</a>\>\""}\
+]}], "\n", "|>"}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\n"}], "\n", 
  RowBox[{"CloudDeploy", "[", 
   RowBox[{"form", ",", " ", 
    RowBox[{"Permissions", " ", "\[Rule]", " ", "\"\<Public\>\""}]}], 
@@ -268,10 +269,10 @@ Cell[BoxData[
    TagBox[
     ButtonBox[
      PaneSelectorBox[{
-      False->"\<\"https://www.wolframcloud.com/objects/84962101-58d2-4a46-\
-94e3-bb4c4ec6def0\"\>", True->
-      StyleBox["\<\"https://www.wolframcloud.com/objects/84962101-58d2-4a46-\
-94e3-bb4c4ec6def0\"\>", "HyperlinkActive"]}, Dynamic[
+      False->"\<\"https://www.wolframcloud.com/objects/2f76c734-209d-4599-\
+af71-f9c17ea59ea6\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/2f76c734-209d-4599-\
+af71-f9c17ea59ea6\"\>", "HyperlinkActive"]}, Dynamic[
        CurrentValue["MouseOver"]],
       BaseStyle->{"Hyperlink"},
       FrameMargins->0,
@@ -279,16 +280,16 @@ Cell[BoxData[
      BaseStyle->"Hyperlink",
      ButtonData->{
        URL[
-       "https://www.wolframcloud.com/objects/84962101-58d2-4a46-94e3-\
-bb4c4ec6def0"], None},
+       "https://www.wolframcloud.com/objects/2f76c734-209d-4599-af71-\
+f9c17ea59ea6"], None},
      ButtonNote->
-      "https://www.wolframcloud.com/objects/84962101-58d2-4a46-94e3-\
-bb4c4ec6def0"],
+      "https://www.wolframcloud.com/objects/2f76c734-209d-4599-af71-\
+f9c17ea59ea6"],
     Annotation[#, 
-     "https://www.wolframcloud.com/objects/84962101-58d2-4a46-94e3-\
-bb4c4ec6def0", "Hyperlink"]& ], "]"}],
+     "https://www.wolframcloud.com/objects/2f76c734-209d-4599-af71-\
+f9c17ea59ea6", "Hyperlink"]& ], "]"}],
   CloudObject[
-  "https://www.wolframcloud.com/objects/84962101-58d2-4a46-94e3-bb4c4ec6def0"],
+  "https://www.wolframcloud.com/objects/2f76c734-209d-4599-af71-f9c17ea59ea6"],
   SelectWithContents->True]], "Output"]
 }, Open  ]],
 
@@ -2130,8 +2131,8 @@ temperatures.  \
 "Output"]
 }, Open  ]]
 },
-WindowSize->{1367, 813},
-WindowMargins->{{Automatic, 128}, {-10, Automatic}},
+WindowSize->{1413, 813},
+WindowMargins->{{Automatic, 82}, {-10, Automatic}},
 FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (February 25, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2147,30 +2148,30 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 11706, 240, 1833, "Code"],
-Cell[12289, 264, 991, 27, 33, "Output"]
+Cell[580, 22, 11830, 241, 1833, "Code"],
+Cell[12413, 265, 991, 27, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13317, 296, 8743, 200, 1553, "Code"],
-Cell[22063, 498, 266, 7, 21, "Message"],
-Cell[22332, 507, 231, 6, 21, "Message"],
-Cell[22566, 515, 7804, 114, 8292, "Output"]
+Cell[13441, 297, 8743, 200, 1553, "Code"],
+Cell[22187, 499, 266, 7, 21, "Message"],
+Cell[22456, 508, 231, 6, 21, "Message"],
+Cell[22690, 516, 7804, 114, 8292, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30407, 634, 141, 3, 31, "Input"],
-Cell[30551, 639, 45, 1, 31, "Output"]
+Cell[30531, 635, 141, 3, 31, "Input"],
+Cell[30675, 640, 45, 1, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30633, 645, 1748, 41, 132, "Input"],
-Cell[32384, 688, 9496, 151, 1932, "Output"]
+Cell[30757, 646, 1748, 41, 132, "Input"],
+Cell[32508, 689, 9496, 151, 1932, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[41917, 844, 61, 1, 31, "Input"],
-Cell[41981, 847, 62, 1, 31, "Output"]
+Cell[42041, 845, 61, 1, 31, "Input"],
+Cell[42105, 848, 62, 1, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42080, 853, 30, 0, 31, "Input"],
-Cell[42113, 855, 93020, 1274, 19812, "Output"]
+Cell[42204, 854, 30, 0, 31, "Input"],
+Cell[42237, 856, 93020, 1274, 19812, "Output"]
 }, Open  ]]
 }
 ]
