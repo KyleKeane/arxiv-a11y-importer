@@ -3,6 +3,9 @@ Deploys a webform that can return the equations from a LaTeX article on arxiv in
 
 My hosted version is sitting at https://www.wolframcloud.com/objects/10f82ee8-946b-401b-8997-1906b87da404
 
+It is storing success/failure records at
+https://datadrop.wolframcloud.com/databin/DDf67db9f71a2-3382-463a-b031-43ea40fa9317
+
 This is just a quick and dirty app that I threw together as an exercise, it does pretty well on straightforward content, but it fails to find things that are inside of user defintions such as \ee for \begin{equation}
 
 Please report any issues using GitHub, including a link to the article that doesn't parse correctly.
